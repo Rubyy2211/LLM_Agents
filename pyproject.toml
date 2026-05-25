@@ -1,0 +1,44 @@
+[build-system]
+requires = ["setuptools>=68", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "agente-rag-gti"
+version = "0.1.0"
+description = "Repo-ejemplo de la práctica del Asistente DNI (Inteligencia Artificial, 3º GTI, UPV). Caso paralelo: GTI Orienta."
+readme = "README.md"
+requires-python = ">=3.11"
+authors = [
+    { name = "Vicente Rivas Monferrer", email = "vicenterivasmonferrer12@gmail.com" }
+]
+license = { text = "MIT" }
+dependencies = [
+    "requests>=2.31",
+    "chromadb>=0.5",
+    "langchain-text-splitters>=0.2",
+    "rank-bm25>=0.2.2",
+    "fastapi>=0.110",
+    "uvicorn[standard]>=0.29",
+    "python-dotenv>=1.0",
+]
+
+[project.optional-dependencies]
+dev = [
+    "pytest>=8.0",
+    "ruff>=0.4",
+]
+
+[tool.setuptools.packages.find]
+where = ["src"]
+
+[tool.ruff]
+line-length = 100
+target-version = "py311"
+
+[tool.ruff.lint]
+select = ["E", "F", "I", "B", "UP"]
+ignore = ["E501"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+addopts = "-q"

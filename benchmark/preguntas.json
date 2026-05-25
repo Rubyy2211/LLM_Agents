@@ -1,0 +1,53 @@
+[
+  {
+    "id": "q1",
+    "categoria": "asignaturas",
+    "pregunta": "¿Hay alguna asignatura sobre desarrollo de videojuegos en GTI?",
+    "fuentes_esperadas": ["3_tercero.txt", "4_cuarto.txt"]
+  },
+  {
+    "id": "q2",
+    "categoria": "asignaturas",
+    "pregunta": "¿En qué consiste la asignatura de Diseño de Interfaces y Experiencia de Usuario?",
+    "fuentes_esperadas": ["3_tercero.txt"]
+  },
+  {
+    "id": "q3",
+    "categoria": "asignaturas",
+    "pregunta": "¿Qué se da en la asignatura de Tratamiento Digital de Imagen?",
+    "fuentes_esperadas": ["3_tercero.txt"]
+  },
+  {
+    "id": "q4",
+    "categoria": "primer_curso",
+    "pregunta": "¿Qué asignaturas de primero introducen a la programación?",
+    "fuentes_esperadas": ["1_primero.txt"]
+  },
+  {
+    "id": "q5",
+    "categoria": "consejo",
+    "pregunta": "Mi hijo quiere ser diseñador de videojuegos, ¿le sirve este grado?",
+    "fuentes_esperadas": ["3_tercero.txt", "4_cuarto.txt"]
+  },
+  {
+    "id": "q6",
+    "categoria": "trampa_retrieval",
+    "pregunta": "¿Qué se da en la asignatura de Inteligencia Artificial?",
+    "fuentes_esperadas": ["3_tercero.txt"],
+    "nota": "Caso conocido: el retrieval semántico se distrae con 'Visión Artificial'. Documentado en el Colab §10."
+  },
+  {
+    "id": "q7",
+    "categoria": "fuera_de_ambito",
+    "pregunta": "¿Hay alguna asignatura sobre cocina creativa?",
+    "fuentes_esperadas": [],
+    "respuesta_esperada": "No tengo esa información en mis fuentes"
+  },
+  {
+    "id": "q8",
+    "categoria": "fuera_de_ambito",
+    "pregunta": "¿Cuánto cuesta el alquiler en Valencia?",
+    "fuentes_esperadas": [],
+    "respuesta_esperada": "No tengo esa información en mis fuentes"
+  }
+]

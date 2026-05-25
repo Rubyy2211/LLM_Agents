@@ -1,0 +1,37 @@
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.Python
+.venv/
+venv/
+env/
+*.egg-info/
+build/
+dist/
+
+# Vector store / índices generados
+data/
+*.sqlite3
+
+# Tests / coverage
+.pytest_cache/
+.coverage
+htmlcov/
+
+# Entornos / secretos
+.env
+.env.local
+
+# IDE
+.vscode/
+.idea/
+*.swp
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Resultados de evaluación (regenerables)
+benchmark/runs/
