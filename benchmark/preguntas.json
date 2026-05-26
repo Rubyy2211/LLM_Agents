@@ -70,7 +70,7 @@
     "id": "q12",
     "categoria": "detalle_especifico",
     "pregunta": "¿Necesito formación previa para ser voluntario en DNI?",
-    "fuentes_esperadas": ["09_como_participar.txt", "08_preguntas_basicas.txt"]
+    "fuentes_esperadas": ["16_resis_49_preguntas.txt", "09_como_participar.txt", "08_preguntas_basicas.txt"]
   },
   {
     "id": "q13",

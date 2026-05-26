@@ -18,8 +18,8 @@
     "metricas": {
       "prompt_tokens": 767,
       "output_tokens": 112,
-      "tokens_per_sec": 105.59,
-      "latencia_s": 7.43,
+      "tokens_per_sec": 102.07,
+      "latencia_s": 7.16,
       "modelo": "qwen2.5:3b"
     },
     "calidad": "acierto"
@@ -30,7 +30,7 @@
     "pregunta_id": "q02",
     "categoria": "logistica",
     "pregunta": "¿Cómo me apunto a los desayunos solidarios?",
-    "respuesta": "La actividad se realiza siempre los sábados. Si ese sábado hay actividad, el miércoles se publica por la comunidad de WhatsApp y por redes sociales un formulario para inscribirse. (01_faq_dni.txt)",
+    "respuesta": "La actividad se realiza siempre los sábados. Si ese sábado hay actividad, el miércoles se publica por la comunidad de WhatsApp y por redes sociales un formulario para inscribirse (01_faq_dni.txt). No tienes que ir al resto de actividades si te apuntas a una sola vez (07_desayunos_logistica.txt).",
     "fuentes": [
       "10_proyectos.txt",
       "01_faq_dni.txt",
@@ -39,9 +39,9 @@
     ],
     "metricas": {
       "prompt_tokens": 1191,
-      "output_tokens": 50,
-      "tokens_per_sec": 106.13,
-      "latencia_s": 3.67,
+      "output_tokens": 75,
+      "tokens_per_sec": 88.49,
+      "latencia_s": 4.29,
       "modelo": "qwen2.5:3b"
     },
     "calidad": "acierto"
@@ -52,7 +52,7 @@
     "pregunta_id": "q03",
     "categoria": "logistica",
     "pregunta": "¿Cuándo y dónde son los desayunos solidarios?",
-    "respuesta": "Los desayunos solidarios suelen ser los fines de semana (sábados o domingos) por la mañana temprano, típicamente entre las 9:00-12:00h. La hora exacta varía según la zona donde vayamos y la coordinación con las personas sin hogar. Te avisaremos con antelación del punto de encuentro y hora exacta en el grupo de WhatsApp. El punto de encuentro siempre es la Porta de la Mar de Valencia. Los desayunos solidarios se realizan una vez a la semana, pero lo mejor es que consultes el calendario de la comunidad de WhatsApp o preguntas a un miembro del staff. (01_faq_dni.txt)(07_desayunos_logistica.txt)",
+    "respuesta": "Los desayunos solidarios suelen ser los fines de semana (sábados o domingos) por la mañana temprano, típicamente entre las 9:00-12:00h. La hora exacta varía según la zona donde vayamos y la coordinación con las personas sin hogar. Te avisaremos con antelación del punto de encuentro y hora exacta en el grupo de WhatsApp. El punto de encuentro siempre es la Porta de la Mar de Valencia. Los desayunos son a las 8 de la mañana y las cenas a las ocho y media de la tarde (20:30). (11_horarios_ubicaciones.txt, 07_desayunos_logistica.txt)",
     "fuentes": [
       "10_proyectos.txt",
       "01_faq_dni.txt",
@@ -61,9 +61,9 @@
     ],
     "metricas": {
       "prompt_tokens": 1193,
-      "output_tokens": 168,
-      "tokens_per_sec": 103.44,
-      "latencia_s": 5.07,
+      "output_tokens": 162,
+      "tokens_per_sec": 106.27,
+      "latencia_s": 4.69,
       "modelo": "qwen2.5:3b"
     },
     "calidad": "acierto"
@@ -74,7 +74,7 @@
     "pregunta_id": "q04",
     "categoria": "logistica",
     "pregunta": "¿Qué necesito llevar para ir a un desayuno solidario?",
-    "respuesta": "Los voluntarios deben llevar bocadillos, café, zumo y fruta. También es recomendable traer algo de ropa cómoda si se realiza la actividad al aire libre. (07_desayunos_logistica.txt)",
+    "respuesta": "Los voluntarios deben llevar bocadillos, café, zumo y fruta. Además, es importante traer algo de conversación y compañía para las personas sin hogar. (07_desayunos_logistica.txt)",
     "fuentes": [
       "10_proyectos.txt",
       "01_faq_dni.txt",
@@ -84,9 +84,9 @@
     ],
     "metricas": {
       "prompt_tokens": 1227,
-      "output_tokens": 51,
-      "tokens_per_sec": 110.31,
-      "latencia_s": 3.79,
+      "output_tokens": 48,
+      "tokens_per_sec": 110.23,
+      "latencia_s": 3.44,
       "modelo": "qwen2.5:3b"
     },
     "calidad": "acierto"
@@ -97,7 +97,7 @@
     "pregunta_id": "q05",
     "categoria": "logistica",
     "pregunta": "¿Cómo contacto con DNI para apuntarme como voluntario?",
-    "respuesta": "Para contactarte como voluntario, puedes usar WhatsApp al 962 025 978 o al 647 440 275 (la forma más rápida y directa). También puedes consultar nuestra web damosnuestrailusionvlc.org. Para consultas generales o unirte como voluntario, WhatsApp es lo mejor - ¡te respondemos rápido y te añadimos a los grupos de coordinación!",
+    "respuesta": "Para apuntarte como voluntario, puedes contactar con ellos por WhatsApp al 962 025 978 o al 647 440 275 (es la forma más rápida y directa). También puedes consultar en su web damosnuestrailusionvlc.org. Si tienes dudas o inconvenientes, habla con los coordinadores.",
     "fuentes": [
       "16_resis_49_preguntas.txt",
       "14_impacto_social.txt",
@@ -106,9 +106,9 @@
     ],
     "metricas": {
       "prompt_tokens": 1101,
-      "output_tokens": 97,
-      "tokens_per_sec": 107.24,
-      "latencia_s": 3.98,
+      "output_tokens": 85,
+      "tokens_per_sec": 107.65,
+      "latencia_s": 3.81,
       "modelo": "qwen2.5:3b"
     },
     "calidad": "acierto"
@@ -119,7 +119,7 @@
     "pregunta_id": "q06",
     "categoria": "sintesis_multidoc",
     "pregunta": "¿En qué se diferencian el proyecto de residencias de mayores y el refuerzo escolar?",
-    "respuesta": "El proyecto de residencias de mayores (RESIS) busca crear un vínculo de amistad, confianza y compañía con los abuelitos para que se sientan escuchados y valorados. En cambio, el refuerzo escolar (COLES) tiene como objetivo ayudar a niños que viven realidades difíciles mediante actividades de repaso de deberes o lectura de cuentos. El vínculo en RESIS es más personalizado con abuelitos mayores, mientras que en COLES se enfoca en la educación y el aprendizaje de niños de primaria.",
+    "respuesta": "El proyecto de residencias de mayores (RESIS) busca crear un vínculo de amistad, confianza y compañía con los abuelitos para que se sientan escuchados y valorados. En cambio, el refuerzo escolar (COLES) se realiza en una biblioteca tutorizada para niños desde los tres años hasta sexto de primaria. Los voluntarios del COLES ayudan a niños que viven realidades difíciles con actividades como repaso de deberes o lectura de cuentos. El vínculo es más ligado al colegio y el proyecto de RESIS se enfoca en la relación con los abuelitos en residencias.",
     "fuentes": [
       "10_proyectos.txt",
       "11_horarios_ubicaciones.txt",
@@ -129,9 +129,9 @@
     ],
     "metricas": {
       "prompt_tokens": 1332,
-      "output_tokens": 127,
-      "tokens_per_sec": 106.14,
-      "latencia_s": 4.31,
+      "output_tokens": 144,
+      "tokens_per_sec": 110.82,
+      "latencia_s": 4.53,
       "modelo": "qwen2.5:3b"
     },
     "calidad": "acierto"
@@ -153,8 +153,8 @@
     "metricas": {
       "prompt_tokens": 1132,
       "output_tokens": 129,
-      "tokens_per_sec": 107.76,
-      "latencia_s": 5.03,
+      "tokens_per_sec": 103.09,
+      "latencia_s": 4.2,
       "modelo": "qwen2.5:3b"
     },
     "calidad": "acierto"
@@ -165,7 +165,7 @@
     "pregunta_id": "q08",
     "categoria": "sintesis_multidoc",
     "pregunta": "¿Cuántos voluntarios tiene DNI y qué impacto social tiene?",
-    "respuesta": "DNI cuenta con +750 jóvenes interesados en las actividades y +400 voluntarios activos que participan regularmente en los proyectos. El impacto social de DNI se ha visto reflejado en la movilización de más de 400 voluntarios semanales, beneficiando a cientos de personas através de desayunos/cenas semanalmente para personas sin hogar, actividades semestrales los miércoles para ancianos en residencias y tutorizados COLES para niños en riesgo de exclusión.",
+    "respuesta": "DNI cuenta con +750 jóvenes interesados en sus actividades y +400 voluntarios activos. El impacto social de DNI se ha visto reflejado en la movilización de más de 400 voluntarios que han participado en proyectos semanales beneficiosos para cientos de personas, como desayunos/cenas para personas sin hogar casi todas las semanas, actividades semanalmente para ancianos en residencias y tutorizados COLES para niños en riesgo de exclusión.",
     "fuentes": [
       "14_impacto_social.txt",
       "08_preguntas_basicas.txt",
@@ -173,9 +173,9 @@
     ],
     "metricas": {
       "prompt_tokens": 1008,
-      "output_tokens": 117,
-      "tokens_per_sec": 107.29,
-      "latencia_s": 4.31,
+      "output_tokens": 111,
+      "tokens_per_sec": 104.3,
+      "latencia_s": 4.08,
       "modelo": "qwen2.5:3b"
     },
     "calidad": "acierto"
@@ -186,7 +186,7 @@
     "pregunta_id": "q09",
     "categoria": "contradiccion",
     "pregunta": "¿A qué hora son los desayunos solidarios?",
-    "respuesta": "Los desayunos son a las 8 de la mañana (01_faq_dni.txt).",
+    "respuesta": "Los desayunos son a las 8 de la mañana (01_faq_dni.txt). El formulario se publica el miércoles por WhatsApp (01_faq_dni.txt).",
     "fuentes": [
       "10_proyectos.txt",
       "11_horarios_ubicaciones.txt",
@@ -196,9 +196,9 @@
     ],
     "metricas": {
       "prompt_tokens": 1209,
-      "output_tokens": 22,
-      "tokens_per_sec": 112.65,
-      "latencia_s": 3.75,
+      "output_tokens": 42,
+      "tokens_per_sec": 108.78,
+      "latencia_s": 3.38,
       "modelo": "qwen2.5:3b"
     },
     "calidad": "acierto"
@@ -221,8 +221,8 @@
     "metricas": {
       "prompt_tokens": 1349,
       "output_tokens": 40,
-      "tokens_per_sec": 108.78,
-      "latencia_s": 3.9,
+      "tokens_per_sec": 110.19,
+      "latencia_s": 3.43,
       "modelo": "qwen2.5:3b"
     },
     "calidad": "acierto"
@@ -233,7 +233,7 @@
     "pregunta_id": "q11",
     "categoria": "detalle_especifico",
     "pregunta": "¿El refuerzo escolar requiere compromiso regular o puedo ir cuando quiera?",
-    "respuesta": "Los desayunos son los sábados (07_desayunos_logistica.txt). El formulario se publica el miércoles por WhatsApp (01_faq_dni.txt). El refuerzo escolar requiere un compromiso más regular y para asistir debes estar disponible los días Lunes, martes, miércoles, jueves y viernes de 15:30 a 16:30. No tienes que ir cuando quieras, sino que necesitas estar disponible en esos horarios (06_coles_refuerzo.txt).",
+    "respuesta": "Los desayunos son los sábados (07_desayunos_logistica.txt). El formulario se publica el miércoles por WhatsApp (01_faq_dni.txt).",
     "fuentes": [
       "10_proyectos.txt",
       "11_horarios_ubicaciones.txt",
@@ -242,9 +242,9 @@
     ],
     "metricas": {
       "prompt_tokens": 1348,
-      "output_tokens": 123,
-      "tokens_per_sec": 106.53,
-      "latencia_s": 4.52,
+      "output_tokens": 40,
+      "tokens_per_sec": 108.71,
+      "latencia_s": 3.46,
       "modelo": "qwen2.5:3b"
     },
     "calidad": "acierto"
@@ -264,11 +264,11 @@
     "metricas": {
       "prompt_tokens": 983,
       "output_tokens": 10,
-      "tokens_per_sec": 116.8,
-      "latencia_s": 3.28,
+      "tokens_per_sec": 118.43,
+      "latencia_s": 3.06,
       "modelo": "qwen2.5:3b"
     },
-    "calidad": "fallo"
+    "calidad": "acierto"
   },
   {
     "modelo": "qwen2.5:3b",
@@ -287,8 +287,8 @@
     "metricas": {
       "prompt_tokens": 1019,
       "output_tokens": 20,
-      "tokens_per_sec": 110.86,
-      "latencia_s": 3.17,
+      "tokens_per_sec": 109.82,
+      "latencia_s": 3.41,
       "modelo": "qwen2.5:3b"
     },
     "calidad": "fuera_ambito_ok"
@@ -311,8 +311,8 @@
     "metricas": {
       "prompt_tokens": 1061,
       "output_tokens": 20,
-      "tokens_per_sec": 113.07,
-      "latencia_s": 3.26,
+      "tokens_per_sec": 110.26,
+      "latencia_s": 3.13,
       "modelo": "qwen2.5:3b"
     },
     "calidad": "fuera_ambito_ok"
@@ -334,8 +334,8 @@
     "metricas": {
       "prompt_tokens": 988,
       "output_tokens": 20,
-      "tokens_per_sec": 111.39,
-      "latencia_s": 3.17,
+      "tokens_per_sec": 111.78,
+      "latencia_s": 2.92,
       "modelo": "qwen2.5:3b"
     },
     "calidad": "fuera_ambito_ok"
@@ -359,8 +359,8 @@
     "metricas": {
       "prompt_tokens": 752,
       "output_tokens": 10,
-      "tokens_per_sec": 112.28,
-      "latencia_s": 6.46,
+      "tokens_per_sec": 119.25,
+      "latencia_s": 6.23,
       "modelo": "llama3.2:3b"
     },
     "calidad": "acierto"
@@ -371,7 +371,7 @@
     "pregunta_id": "q02",
     "categoria": "logistica",
     "pregunta": "¿Cómo me apunto a los desayunos solidarios?",
-    "respuesta": "Para apuntarte a los desayunos solidarios, primero debes inscribirte en el formulario que se publica por la comunidad de WhatsApp y redes sociales el miércoles. (01_faq_dni.txt)",
+    "respuesta": "Para apuntarte a los desayunos solidarios, primero debes inscribirte en el formulario publicado por la comunidad de WhatsApp y redes sociales el miércoles (01_faq_dni.txt).",
     "fuentes": [
       "10_proyectos.txt",
       "01_faq_dni.txt",
@@ -380,9 +380,9 @@
     ],
     "metricas": {
       "prompt_tokens": 1172,
-      "output_tokens": 48,
-      "tokens_per_sec": 105.89,
-      "latencia_s": 3.52,
+      "output_tokens": 45,
+      "tokens_per_sec": 105.79,
+      "latencia_s": 3.47,
       "modelo": "llama3.2:3b"
     },
     "calidad": "acierto"
@@ -393,7 +393,7 @@
     "pregunta_id": "q03",
     "categoria": "logistica",
     "pregunta": "¿Cuándo y dónde son los desayunos solidarios?",
-    "respuesta": "Los desayunos solidarios suelen ser los fines de semana (sábados o domingos) por la mañana temprano, típicamente entre las 9:00-12:00h. La hora exacta varía según la zona donde vayamos y la coordinación con las personas sin hogar. Nos gusta madrugar un poco para llegar cuando la gente está despertando (11_horarios_ubicaciones.txt). El punto de encuentro siempre es la Porta de la Mar de Valencia, desde ahí repartimos los alimentos por las zonas de Mestalla, el centro, El Carmen o el río entre otros (01_faq_dni.txt).",
+    "respuesta": "Los desayunos solidarios suelen ser los fines de semana (sábados o domingos) por la mañana temprano, típicamente entre las 9:00-12:00h. La hora exacta varía según la zona donde vayamos y la coordinación con las personas sin hogar. Nos gusta madrugar un poco para llegar cuando la gente está despertando (11_horarios_ubicaciones.txt). El punto de encuentro siempre es la Porta de la Mar de Valencia (01_faq_dni.txt).",
     "fuentes": [
       "10_proyectos.txt",
       "01_faq_dni.txt",
@@ -402,9 +402,9 @@
     ],
     "metricas": {
       "prompt_tokens": 1174,
-      "output_tokens": 145,
-      "tokens_per_sec": 101.79,
-      "latencia_s": 5.12,
+      "output_tokens": 116,
+      "tokens_per_sec": 104.82,
+      "latencia_s": 4.12,
       "modelo": "llama3.2:3b"
     },
     "calidad": "acierto"
@@ -415,7 +415,7 @@
     "pregunta_id": "q04",
     "categoria": "logistica",
     "pregunta": "¿Qué necesito llevar para ir a un desayuno solidario?",
-    "respuesta": "Para ir a un desayuno solidario, no necesitas llevar nada en particular. Sin embargo, es recomendable llevar algo de dinero para comprar tus propios bocadillos o cenas si lo deseas (15_desayunos_100_preguntas.txt).",
+    "respuesta": "No tengo esa información en mis fuentes.",
     "fuentes": [
       "10_proyectos.txt",
       "01_faq_dni.txt",
@@ -425,9 +425,9 @@
     ],
     "metricas": {
       "prompt_tokens": 1208,
-      "output_tokens": 57,
-      "tokens_per_sec": 103.75,
-      "latencia_s": 4.07,
+      "output_tokens": 10,
+      "tokens_per_sec": 124.7,
+      "latencia_s": 3.36,
       "modelo": "llama3.2:3b"
     },
     "calidad": "acierto"
@@ -438,7 +438,7 @@
     "pregunta_id": "q05",
     "categoria": "logistica",
     "pregunta": "¿Cómo contacto con DNI para apuntarme como voluntario?",
-    "respuesta": "Para contactar con DNI y apuntarte como voluntario, puedes escribir a alguno de los administradores en el grupo de WhatsApp. También puedes consultar la información en la web damosnuestrailusionvlc.org o contactar directamente por WhatsApp al 962 025 978 o 647 440 275 (12_contacto_redes.txt).",
+    "respuesta": "Para contactar con DNI Valencia para apuntarte como voluntario, puedes escribir a alguno de los administradores en el grupo de WhatsApp (Q: ¿Cómo contacto con alguien de la asociación? - A: La mejor manera es entrar en el grupo de WhatsApp). También puedes enviar un mensaje directo en Instagram @dnivalenciaa o utilizar la web damosnuestrailusionvlc.org para más información.",
     "fuentes": [
       "16_resis_49_preguntas.txt",
       "14_impacto_social.txt",
@@ -447,9 +447,9 @@
     ],
     "metricas": {
       "prompt_tokens": 1062,
-      "output_tokens": 77,
-      "tokens_per_sec": 101.17,
-      "latencia_s": 3.96,
+      "output_tokens": 89,
+      "tokens_per_sec": 103.81,
+      "latencia_s": 3.91,
       "modelo": "llama3.2:3b"
     },
     "calidad": "acierto"
@@ -471,8 +471,8 @@
     "metricas": {
       "prompt_tokens": 1294,
       "output_tokens": 10,
-      "tokens_per_sec": 111.89,
-      "latencia_s": 3.12,
+      "tokens_per_sec": 104.69,
+      "latencia_s": 3.38,
       "modelo": "llama3.2:3b"
     },
     "calidad": "acierto"
@@ -494,8 +494,8 @@
     "metricas": {
       "prompt_tokens": 1115,
       "output_tokens": 185,
-      "tokens_per_sec": 100.28,
-      "latencia_s": 4.97,
+      "tokens_per_sec": 98.86,
+      "latencia_s": 5.2,
       "modelo": "llama3.2:3b"
     },
     "calidad": "acierto"
@@ -506,7 +506,7 @@
     "pregunta_id": "q08",
     "categoria": "sintesis_multidoc",
     "pregunta": "¿Cuántos voluntarios tiene DNI y qué impacto social tiene?",
-    "respuesta": "DNI tiene +400 voluntarios activos (08_preguntas_basicas.txt). El impacto de DNI es movilizar a cientos de personas, beneficiando a personas sin hogar, ancianos en residencias y niños en riesgo de exclusión (07_desayunos_logistica.txt)",
+    "respuesta": "DNI tiene +400 voluntarios activos (08_preguntas_basicas.txt). El impacto de DNI es movilizar a cientos de personas, especialmente personas sin hogar, ancianos en residencias y niños en riesgo de exclusión (07_desayunos_logistica.txt).",
     "fuentes": [
       "14_impacto_social.txt",
       "08_preguntas_basicas.txt",
@@ -514,9 +514,9 @@
     ],
     "metricas": {
       "prompt_tokens": 987,
-      "output_tokens": 66,
-      "tokens_per_sec": 104.11,
-      "latencia_s": 3.93,
+      "output_tokens": 64,
+      "tokens_per_sec": 101.24,
+      "latencia_s": 3.86,
       "modelo": "llama3.2:3b"
     },
     "calidad": "acierto"
@@ -538,8 +538,8 @@
     "metricas": {
       "prompt_tokens": 1188,
       "output_tokens": 22,
-      "tokens_per_sec": 103.42,
-      "latencia_s": 3.62,
+      "tokens_per_sec": 110.61,
+      "latencia_s": 3.44,
       "modelo": "llama3.2:3b"
     },
     "calidad": "acierto"
@@ -562,8 +562,8 @@
     "metricas": {
       "prompt_tokens": 1306,
       "output_tokens": 48,
-      "tokens_per_sec": 93.53,
-      "latencia_s": 12.53,
+      "tokens_per_sec": 112.24,
+      "latencia_s": 3.29,
       "modelo": "llama3.2:3b"
     },
     "calidad": "acierto"
@@ -584,8 +584,8 @@
     "metricas": {
       "prompt_tokens": 1311,
       "output_tokens": 10,
-      "tokens_per_sec": 111.98,
-      "latencia_s": 8.73,
+      "tokens_per_sec": 110.44,
+      "latencia_s": 3.13,
       "modelo": "llama3.2:3b"
     },
     "calidad": "acierto"
@@ -605,11 +605,11 @@
     "metricas": {
       "prompt_tokens": 960,
       "output_tokens": 10,
-      "tokens_per_sec": 109.85,
-      "latencia_s": 3.05,
+      "tokens_per_sec": 103.52,
+      "latencia_s": 3.27,
       "modelo": "llama3.2:3b"
     },
-    "calidad": "fallo"
+    "calidad": "acierto"
   },
   {
     "modelo": "llama3.2:3b",
@@ -628,8 +628,8 @@
     "metricas": {
       "prompt_tokens": 998,
       "output_tokens": 10,
-      "tokens_per_sec": 112.05,
-      "latencia_s": 3.36,
+      "tokens_per_sec": 108.89,
+      "latencia_s": 3.42,
       "modelo": "llama3.2:3b"
     },
     "calidad": "fuera_ambito_ok"
@@ -652,8 +652,8 @@
     "metricas": {
       "prompt_tokens": 1040,
       "output_tokens": 10,
-      "tokens_per_sec": 107.45,
-      "latencia_s": 3.24,
+      "tokens_per_sec": 115.57,
+      "latencia_s": 2.96,
       "modelo": "llama3.2:3b"
     },
     "calidad": "fuera_ambito_ok"
@@ -675,8 +675,8 @@
     "metricas": {
       "prompt_tokens": 970,
       "output_tokens": 10,
-      "tokens_per_sec": 108.27,
-      "latencia_s": 3.29,
+      "tokens_per_sec": 108.33,
+      "latencia_s": 3.56,
       "modelo": "llama3.2:3b"
     },
     "calidad": "fuera_ambito_ok"
@@ -687,7 +687,7 @@
     "pregunta_id": "q01",
     "categoria": "factual_directa",
     "pregunta": "¿Qué es la asociación DNI?",
-    "respuesta": "DNI (Damos Nuestra Ilusión) es una asociación de jóvenes voluntarios en Valencia con el lema \"PARA. MIRA. AYUDA\". Somos +400 voluntarios activos que realizamos proyectos sociales como desayunos solidarios para personas sin hogar, actividades con ancianos (RESIS) y refuerzo escolar (COLES). (08_preguntas_basicas.txt) Nuestra misión es acompañar a quien lo necesita con empatía y acción directa. (08_preguntas_basicas.txt)",
+    "respuesta": "DNI (Damos Nuestra Ilusión) es una asociación de jóvenes voluntarios en Valencia con el lema \"PARA. MIRA. AYUDA\" (08_preguntas_basicas.txt). Somos +400 voluntarios activos que realizamos proyectos sociales como desayunos solidarios para personas sin hogar, actividades con ancianos (RESIS) y refuerzo escolar (COLES) (08_preguntas_basicas.txt). Nuestra misión es acompañar a quien lo necesita con empatía y acción directa (08_preguntas_basicas.txt).",
     "fuentes": [
       "08_preguntas_basicas.txt",
       "02_presentacion_desayunos.txt",
@@ -699,9 +699,9 @@
     ],
     "metricas": {
       "prompt_tokens": 709,
-      "output_tokens": 111,
-      "tokens_per_sec": 42.32,
-      "latencia_s": 2.62,
+      "output_tokens": 121,
+      "tokens_per_sec": 4.37,
+      "latencia_s": 27.66,
       "modelo": "gemma3:4b"
     },
     "calidad": "acierto"
@@ -722,8 +722,8 @@
     "metricas": {
       "prompt_tokens": 1095,
       "output_tokens": 91,
-      "tokens_per_sec": 67.78,
-      "latencia_s": 1.34,
+      "tokens_per_sec": 72.58,
+      "latencia_s": 1.25,
       "modelo": "gemma3:4b"
     },
     "calidad": "acierto"
@@ -744,8 +744,8 @@
     "metricas": {
       "prompt_tokens": 1095,
       "output_tokens": 107,
-      "tokens_per_sec": 83.52,
-      "latencia_s": 1.28,
+      "tokens_per_sec": 82.2,
+      "latencia_s": 1.3,
       "modelo": "gemma3:4b"
     },
     "calidad": "acierto"
@@ -756,7 +756,7 @@
     "pregunta_id": "q04",
     "categoria": "logistica",
     "pregunta": "¿Qué necesito llevar para ir a un desayuno solidario?",
-    "respuesta": "La actividad consiste en que un grupo de voluntarios se reúne en un punto de encuentro y se divide en equipos. Cada equipo recorre una zona de Valencia repartiendo desayunos o cenas a personas sin hogar. Lo más importante no es solo la comida, sino el tiempo que se comparte con ellos, ofreciéndoles conversación y compañía. (07_desayunos_logistica.txt) La actividad se realiza siempre los sábados. Si ese sábado hay actividad, el miércoles se publica por la comunidad de WhatsApp y por redes sociales un formulario para inscribirse. (01_faq_dni.txt)",
+    "respuesta": "La actividad consiste en que un grupo de voluntarios se reúne en un punto de encuentro y se divide en equipos. Cada equipo recorre una zona de Valencia repartiendo desayunos o cenas a personas sin hogar. Lo más importante no es solo la comida, sino el tiempo que se comparte con ellos, ofreciéndoles conversación y compañía. (07_desayunos_logistica.txt)\nLa actividad se realiza siempre los sábados. Si ese sábado hay actividad, el miércoles se publica por la comunidad de WhatsApp y por redes sociales un formulario para inscribirse. (01_faq_dni.txt)\nNormalmente, la actividad se realiza una vez a la semana, pero lo mejor es que consultes el calendario de la comunidad de WhatsApp o preguntas a un miembro del staff. (07_desayunos_logistica.txt)",
     "fuentes": [
       "10_proyectos.txt",
       "01_faq_dni.txt",
@@ -766,9 +766,9 @@
     ],
     "metricas": {
       "prompt_tokens": 1126,
-      "output_tokens": 125,
-      "tokens_per_sec": 86.99,
-      "latencia_s": 1.44,
+      "output_tokens": 175,
+      "tokens_per_sec": 103.08,
+      "latencia_s": 1.7,
       "modelo": "gemma3:4b"
     },
     "calidad": "acierto"
@@ -789,8 +789,8 @@
     "metricas": {
       "prompt_tokens": 1024,
       "output_tokens": 93,
-      "tokens_per_sec": 80.65,
-      "latencia_s": 1.15,
+      "tokens_per_sec": 79.5,
+      "latencia_s": 1.17,
       "modelo": "gemma3:4b"
     },
     "calidad": "acierto"
@@ -801,7 +801,7 @@
     "pregunta_id": "q06",
     "categoria": "sintesis_multidoc",
     "pregunta": "¿En qué se diferencian el proyecto de residencias de mayores y el refuerzo escolar?",
-    "respuesta": "El proyecto de residencias de mayores (RESIS) busca crear un vínculo de amistad, confianza y compañía con los abuelitos, donde los voluntarios aprenden empatía, paciencia, escucha activa y la importancia de los pequeños gestos (16_resis_49_preguntas.txt). El refuerzo escolar (COLES) se realiza en una biblioteca tutorizada en Valencia, ayudando a niños que viven realidades difíciles, con actividades de repaso de deberes o conceptos, lectura de cuentos, realización de manualidades, etc. (06_coles_refuerzo.txt, 01_faq_dni.txt). El refuerzo escolar tiene horarios específicos de lunes a viernes de 15:30 a 16:30, y se realiza en el CEIP Antonio Ferrandis de la Coma (11_horarios_ubicaciones.txt, 06_coles_refuerzo.txt, 01_faq_dni.txt). (10_proyectos.txt)",
+    "respuesta": "El proyecto de residencias de mayores (RESIS) busca crear un vínculo de amistad, confianza y compañía con los abuelitos, donde los voluntarios aprenden empatía, paciencia, escucha activa y la importancia de los pequeños gestos (16_resis_49_preguntas.txt). El refuerzo escolar (COLES) se realiza en una biblioteca tutorizada en Valencia, ayudando a niños que viven realidades difíciles, con actividades de repaso de deberes o conceptos, lectura de cuentos y realización de manualidades (06_coles_refuerzo.txt, 10_proyectos.txt, 01_faq_dni.txt). (06_coles_refuerzo.txt, 10_proyectos.txt, 01_faq_dni.txt)",
     "fuentes": [
       "10_proyectos.txt",
       "11_horarios_ubicaciones.txt",
@@ -811,9 +811,9 @@
     ],
     "metricas": {
       "prompt_tokens": 1224,
-      "output_tokens": 221,
-      "tokens_per_sec": 112.25,
-      "latencia_s": 1.97,
+      "output_tokens": 174,
+      "tokens_per_sec": 102.44,
+      "latencia_s": 1.7,
       "modelo": "gemma3:4b"
     },
     "calidad": "acierto"
@@ -835,8 +835,8 @@
     "metricas": {
       "prompt_tokens": 1038,
       "output_tokens": 148,
-      "tokens_per_sec": 98.72,
-      "latencia_s": 1.5,
+      "tokens_per_sec": 97.2,
+      "latencia_s": 1.52,
       "modelo": "gemma3:4b"
     },
     "calidad": "acierto"
@@ -856,8 +856,8 @@
     "metricas": {
       "prompt_tokens": 925,
       "output_tokens": 121,
-      "tokens_per_sec": 93.48,
-      "latencia_s": 1.29,
+      "tokens_per_sec": 90.01,
+      "latencia_s": 1.34,
       "modelo": "gemma3:4b"
     },
     "calidad": "acierto"
@@ -878,9 +878,9 @@
     ],
     "metricas": {
       "prompt_tokens": 1108,
-      "output_tokens": 117,
-      "tokens_per_sec": 88.71,
-      "latencia_s": 1.32,
+      "output_tokens": 116,
+      "tokens_per_sec": 89.08,
+      "latencia_s": 1.3,
       "modelo": "gemma3:4b"
     },
     "calidad": "acierto"
@@ -903,8 +903,8 @@
     "metricas": {
       "prompt_tokens": 1254,
       "output_tokens": 146,
-      "tokens_per_sec": 96.96,
-      "latencia_s": 1.51,
+      "tokens_per_sec": 98.07,
+      "latencia_s": 1.49,
       "modelo": "gemma3:4b"
     },
     "calidad": "acierto"
@@ -925,8 +925,8 @@
     "metricas": {
       "prompt_tokens": 1217,
       "output_tokens": 27,
-      "tokens_per_sec": 34.56,
-      "latencia_s": 0.78,
+      "tokens_per_sec": 35.32,
+      "latencia_s": 0.76,
       "modelo": "gemma3:4b"
     },
     "calidad": "acierto"
@@ -946,11 +946,11 @@
     "metricas": {
       "prompt_tokens": 925,
       "output_tokens": 24,
-      "tokens_per_sec": 33.82,
-      "latencia_s": 0.71,
+      "tokens_per_sec": 32.02,
+      "latencia_s": 0.75,
       "modelo": "gemma3:4b"
     },
-    "calidad": "fallo"
+    "calidad": "acierto"
   },
   {
     "modelo": "gemma3:4b",
@@ -969,8 +969,8 @@
     "metricas": {
       "prompt_tokens": 936,
       "output_tokens": 39,
-      "tokens_per_sec": 44.88,
-      "latencia_s": 0.87,
+      "tokens_per_sec": 48.76,
+      "latencia_s": 0.8,
       "modelo": "gemma3:4b"
     },
     "calidad": "fuera_ambito_ok"
@@ -993,8 +993,8 @@
     "metricas": {
       "prompt_tokens": 987,
       "output_tokens": 9,
-      "tokens_per_sec": 13.68,
-      "latencia_s": 0.66,
+      "tokens_per_sec": 14.46,
+      "latencia_s": 0.62,
       "modelo": "gemma3:4b"
     },
     "calidad": "fuera_ambito_ok"
@@ -1016,8 +1016,8 @@
     "metricas": {
       "prompt_tokens": 909,
       "output_tokens": 9,
-      "tokens_per_sec": 14.09,
-      "latencia_s": 0.64,
+      "tokens_per_sec": 13.87,
+      "latencia_s": 0.65,
       "modelo": "gemma3:4b"
     },
     "calidad": "fuera_ambito_ok"
@@ -1041,8 +1041,8 @@
     "metricas": {
       "prompt_tokens": 737,
       "output_tokens": 100,
-      "tokens_per_sec": 1.79,
-      "latencia_s": 55.85,
+      "tokens_per_sec": 1.92,
+      "latencia_s": 52.14,
       "modelo": "llama3.1:8b"
     },
     "calidad": "acierto"
@@ -1053,7 +1053,7 @@
     "pregunta_id": "q02",
     "categoria": "logistica",
     "pregunta": "¿Cómo me apunto a los desayunos solidarios?",
-    "respuesta": "La actividad se realiza siempre los sábados. Si ese sábado hay actividad, el miércoles se publica por la comunidad de WhatsApp y por redes sociales un formulario para inscribirse (07_desayunos_logistica.txt). La actividad se realiza una vez a la semana, pero lo mejor es que consultes el calendario de la comunidad de WhatsApp o preguntas a un miembro del staff (07_desayunos_logistica.txt).\n\nNota: Hay dos respuestas diferentes sobre la frecuencia de los desayunos solidarios. En 07_desayunos_logistica.txt se menciona que \"Normalmente, la actividad se realiza una vez a la semana\", mientras que en el mismo archivo se dice que lo mejor es consultar el calendario de la comunidad de WhatsApp o preguntar a un miembro del staff para saber si hay actividad ese sábado.",
+    "respuesta": "La actividad se realiza siempre los sábados. Si ese sábado hay actividad, el miércoles se publica por la comunidad de WhatsApp y por redes sociales un formulario para inscribirse (01_faq_dni.txt) (07_desayunos_logistica.txt). No tienes que ir a todos los desayunos si solo te apuntas uno (01_faq_dni.txt) (07_desayunos_logistica.txt).",
     "fuentes": [
       "10_proyectos.txt",
       "01_faq_dni.txt",
@@ -1062,9 +1062,9 @@
     ],
     "metricas": {
       "prompt_tokens": 1157,
-      "output_tokens": 177,
-      "tokens_per_sec": 110.61,
-      "latencia_s": 1.6,
+      "output_tokens": 90,
+      "tokens_per_sec": 85.17,
+      "latencia_s": 1.06,
       "modelo": "llama3.1:8b"
     },
     "calidad": "acierto"
@@ -1075,7 +1075,7 @@
     "pregunta_id": "q03",
     "categoria": "logistica",
     "pregunta": "¿Cuándo y dónde son los desayunos solidarios?",
-    "respuesta": "Los desayunos solidarios suelen ser los fines de semana (sábados o domingos) por la mañana temprano, típicamente entre las 9:00-12:00h. La hora exacta varía según la zona donde vayamos y la coordinación con las personas sin hogar. El punto de encuentro siempre es la Porta de la Mar de Valencia (01_faq_dni.txt).",
+    "respuesta": "Los desayunos solidarios suelen ser los fines de semana (sábados o domingos) por la mañana temprano, típicamente entre las 9:00-12:00h. El punto de encuentro siempre es la Porta de la Mar de Valencia (11_horarios_ubicaciones.txt). La hora exacta varía según la zona donde vayamos y la coordinación con las personas sin hogar (11_horarios_ubicaciones.txt).\n\nSin embargo, hay una contradicción en la información. En el archivo [01_faq_dni.txt], se indica que los desayunos son a las 8 de la mañana y las cenas a las ocho y media de la tarde.\n\nEs importante consultar el calendario de la comunidad de WhatsApp para obtener la hora exacta del desayuno (07_desayunos_logistica.txt).",
     "fuentes": [
       "10_proyectos.txt",
       "01_faq_dni.txt",
@@ -1084,9 +1084,9 @@
     ],
     "metricas": {
       "prompt_tokens": 1159,
-      "output_tokens": 91,
-      "tokens_per_sec": 86.28,
-      "latencia_s": 1.05,
+      "output_tokens": 182,
+      "tokens_per_sec": 115.99,
+      "latencia_s": 1.57,
       "modelo": "llama3.1:8b"
     },
     "calidad": "acierto"
@@ -1108,8 +1108,8 @@
     "metricas": {
       "prompt_tokens": 1193,
       "output_tokens": 10,
-      "tokens_per_sec": 18.37,
-      "latencia_s": 0.54,
+      "tokens_per_sec": 17.96,
+      "latencia_s": 0.56,
       "modelo": "llama3.1:8b"
     },
     "calidad": "acierto"
@@ -1120,7 +1120,7 @@
     "pregunta_id": "q05",
     "categoria": "logistica",
     "pregunta": "¿Cómo contacto con DNI para apuntarme como voluntario?",
-    "respuesta": "La mejor manera es entrar en el grupo de WhatsApp (16_resis_49_preguntas.txt). Escribe a alguno de los administradores y ellos te redirigirán o te resolverán la pregunta. También puedes contactar directamente por WhatsApp al 962 025 978 o 647 440 275 (12_contacto_redes.txt).",
+    "respuesta": "La mejor manera es entrar en el grupo de WhatsApp (16_resis_49_preguntas.txt). Escribe a alguno de los administradores y ellos te redirigirán o te resolverán la pregunta. También puedes contactar directamente por WhatsApp: 962 025 978 o 647 440 275 (12_contacto_redes.txt).",
     "fuentes": [
       "16_resis_49_preguntas.txt",
       "14_impacto_social.txt",
@@ -1130,8 +1130,8 @@
     "metricas": {
       "prompt_tokens": 1047,
       "output_tokens": 76,
-      "tokens_per_sec": 81.11,
-      "latencia_s": 0.94,
+      "tokens_per_sec": 82.94,
+      "latencia_s": 0.92,
       "modelo": "llama3.1:8b"
     },
     "calidad": "acierto"
@@ -1142,7 +1142,7 @@
     "pregunta_id": "q06",
     "categoria": "sintesis_multidoc",
     "pregunta": "¿En qué se diferencian el proyecto de residencias de mayores y el refuerzo escolar?",
-    "respuesta": "El proyecto de residencias (RESIS) es para personas mayores, mientras que el refuerzo escolar (COLES) es para niños. El perfil de voluntarios suele ser diferente también, ya que en RESIS suelen participar jóvenes estudiantes con ganas de compartir tiempo y aprender de las personas mayores, mientras que en COLES no se especifica un perfil específico de voluntarios (10_proyectos.txt).",
+    "respuesta": "El proyecto de residencias (RESIS) es diferente al refuerzo escolar (COLES) en cuanto a su objetivo y público objetivo. El RESIS busca crear un vínculo de amistad, confianza y compañía con las personas mayores residentes en L'Acollida, mientras que el COLES tiene como objetivo ayudar a niños que viven realidades difíciles en el CEIP Antonio Ferrandis de la Coma Valencia. (10_proyectos.txt, 16_resis_49_preguntas.txt)",
     "fuentes": [
       "10_proyectos.txt",
       "11_horarios_ubicaciones.txt",
@@ -1152,9 +1152,9 @@
     ],
     "metricas": {
       "prompt_tokens": 1279,
-      "output_tokens": 89,
-      "tokens_per_sec": 71.14,
-      "latencia_s": 1.25,
+      "output_tokens": 114,
+      "tokens_per_sec": 84.73,
+      "latencia_s": 1.35,
       "modelo": "llama3.1:8b"
     },
     "calidad": "acierto"
@@ -1165,7 +1165,7 @@
     "pregunta_id": "q07",
     "categoria": "sintesis_multidoc",
     "pregunta": "¿Qué proyectos tiene DNI y cuál recomienda para empezar?",
-    "respuesta": "DNI tiene 3 proyectos principales activos: 1) Desayunos y Cenas Solidarias para personas sin hogar (casi todas las semanas), 2) Charlas con Abuelitos en residencia L'Acollida (miércoles de 5:30-6:30pm), 3) Refuerzo Escolar (COLES) en biblioteca tutorizada para niños. Para empezar te recomendamos los desayunos solidarios o las visitas a abuelitos (RESIS). Son proyectos muy accesibles, no requieren formación previa, y te dan una experiencia completa de lo que es DNI. (10_proyectos.txt)",
+    "respuesta": "DNI tiene 3 proyectos principales activos: 1) Desayunos y Cenas Solidarias para personas sin hogar (casi todas las semanas), 2) Charlas con Abuelitos en residencia L'Acollida (miércoles de 5:30-6:30pm), 3) Refuerzo Escolar (COLES) en biblioteca tutorizada para niños. Para empezar te recomendamos los desayunos solidarios o las visitas a abuelitos (RESIS). Son proyectos muy accesibles, no requieren formación previa, y te dan una experiencia completa de lo que es DNI (10_proyectos.txt).",
     "fuentes": [
       "10_proyectos.txt",
       "09_como_participar.txt",
@@ -1175,9 +1175,9 @@
     ],
     "metricas": {
       "prompt_tokens": 1100,
-      "output_tokens": 144,
-      "tokens_per_sec": 112.98,
-      "latencia_s": 1.27,
+      "output_tokens": 143,
+      "tokens_per_sec": 108.19,
+      "latencia_s": 1.32,
       "modelo": "llama3.1:8b"
     },
     "calidad": "acierto"
@@ -1197,7 +1197,7 @@
     "metricas": {
       "prompt_tokens": 972,
       "output_tokens": 55,
-      "tokens_per_sec": 67.7,
+      "tokens_per_sec": 67.92,
       "latencia_s": 0.81,
       "modelo": "llama3.1:8b"
     },
@@ -1209,7 +1209,7 @@
     "pregunta_id": "q09",
     "categoria": "contradiccion",
     "pregunta": "¿A qué hora son los desayunos solidarios?",
-    "respuesta": "Los desayunos suelen ser por la mañana temprano, típicamente entre las 9:00-12:00h (11_horarios_ubicaciones.txt). La hora exacta varía según la zona donde vayamos y la coordinación con las personas sin hogar. Te avisaremos con antelación del punto de encuentro y hora exacta en el grupo de WhatsApp (11_horarios_ubicaciones.txt).\n\nSin embargo, también se menciona que los desayunos son a las 8:00 de la mañana (01_faq_dni.txt). Es posible que haya una variación dependiendo de la zona o del tipo de actividad.",
+    "respuesta": "Los desayunos solidarios suelen ser por la mañana temprano, típicamente entre las 9:00-12:00h (11_horarios_ubicaciones.txt). La hora exacta varía según la zona donde vayamos y la coordinación con las personas sin hogar. Te avisaremos con antelación del punto de encuentro y hora exacta en el grupo de WhatsApp (11_horarios_ubicaciones.txt).\n\nSin embargo, también se menciona que los desayunos son a las 8:00 de la mañana (01_faq_dni.txt). Es posible que haya una variación dependiendo de la zona o la coordinación específica.\n\nNo tengo esa información en mis fuentes.",
     "fuentes": [
       "10_proyectos.txt",
       "11_horarios_ubicaciones.txt",
@@ -1219,9 +1219,9 @@
     ],
     "metricas": {
       "prompt_tokens": 1173,
-      "output_tokens": 139,
-      "tokens_per_sec": 107.41,
-      "latencia_s": 1.29,
+      "output_tokens": 151,
+      "tokens_per_sec": 110.7,
+      "latencia_s": 1.36,
       "modelo": "llama3.1:8b"
     },
     "calidad": "acierto"
@@ -1232,7 +1232,7 @@
     "pregunta_id": "q10",
     "categoria": "detalle_especifico",
     "pregunta": "¿Qué se hace exactamente en las visitas a residencias de mayores?",
-    "respuesta": "Se tratará de amenizar la tarde al residente, ya sea con una conversación, un paseo o un juego. (03_charlas_abuelitos.txt) Las actividades incluyen: paseos por el jardín, juegos de mesa (parchís, cartas, dominó), conversaciones sobre sus historias de vida, lectura de periódicos, cantar canciones antiguas, manualidades simples, y simplemente hacerles compañía. Lo que más valoran es la atención individualizada - que alguien joven se interese por ellos y les dedique tiempo con cariño. (10_proyectos.txt)",
+    "respuesta": "En las visitas a residencias de mayores se tratará de amenizar la tarde al residente, ya sea con una conversación, un paseo o un juego (03_charlas_abuelitos.txt). Las actividades incluyen paseos por el jardín, juegos de mesa, conversaciones sobre sus historias de vida, lectura de periódicos, cantar canciones antiguas y manualidades simples (10_proyectos.txt).",
     "fuentes": [
       "03_charlas_abuelitos.txt",
       "10_proyectos.txt",
@@ -1243,9 +1243,9 @@
     ],
     "metricas": {
       "prompt_tokens": 1291,
-      "output_tokens": 137,
-      "tokens_per_sec": 105.32,
-      "latencia_s": 1.3,
+      "output_tokens": 96,
+      "tokens_per_sec": 91.04,
+      "latencia_s": 1.05,
       "modelo": "llama3.1:8b"
     },
     "calidad": "acierto"
@@ -1256,7 +1256,7 @@
     "pregunta_id": "q11",
     "categoria": "detalle_especifico",
     "pregunta": "¿El refuerzo escolar requiere compromiso regular o puedo ir cuando quiera?",
-    "respuesta": "El refuerzo escolar (COLES) se realiza en una biblioteca tutorizada en Valencia. La ubicación exacta y los horarios (generalmente tardes entre semana) te los facilitamos cuando te apuntas al proyecto, ya que requiere un compromiso más regular y queremos que sea accesible para tu zona. Si te interesa, contacta al 647 440 275 y te damos todos los detalles específicos. (11_horarios_ubicaciones.txt)\n\nSin embargo, en el archivo [06_coles_refuerzo.txt] se menciona que \"dependiendo de la edad el voluntariado es más de clases enfocadas al repaso de deberes o de conceptos o a la lectura de cuentos, realización de manualidades etc.\", lo que podría sugerir que no hay un compromiso regular fijo.\n\nTambién en [06_coles_refuerzo.txt] se menciona que \"Organizamos coches desde Valencia o alrededores para que todos los voluntarios tengan modo de ir\", lo que sugiere que la asociación facilita el transporte, pero no se especifica si es obligatorio asistir regularmente.\n\nEn resumen, parece que el refuerzo escolar requiere un compromiso más regular, pero no hay una respuesta clara y única. (06_coles_refuerzo.txt)",
+    "respuesta": "El refuerzo escolar (COLES) se realiza en una biblioteca tutorizada en Valencia. La ubicación exacta y los horarios (generalmente tardes entre semana) te los facilitamos cuando te apuntas al proyecto, ya que requiere un compromiso más regular y queremos que sea accesible para tu zona. Si te interesa, contacta al 647 440 275 y te damos todos los detalles específicos. (11_horarios_ubicaciones.txt)\n\nEn actividades de refuerzo escolar vamos a un colegio a ayudar a niños que viven realidades difíciles. Dependiendo de la edad el voluntariado es más de clases enfocadas al repaso de deberes o de conceptos o a la lectura de cuentos, realización de manualidades etc. (06_coles_refuerzo.txt)\n\nPor lo tanto, el refuerzo escolar requiere compromiso regular y no puedes ir cuando quieras. (11_horarios_ubicaciones.txt)",
     "fuentes": [
       "10_proyectos.txt",
       "11_horarios_ubicaciones.txt",
@@ -1265,9 +1265,9 @@
     ],
     "metricas": {
       "prompt_tokens": 1296,
-      "output_tokens": 288,
-      "tokens_per_sec": 125.86,
-      "latencia_s": 2.29,
+      "output_tokens": 213,
+      "tokens_per_sec": 124.41,
+      "latencia_s": 1.71,
       "modelo": "llama3.1:8b"
     },
     "calidad": "acierto"
@@ -1278,7 +1278,7 @@
     "pregunta_id": "q12",
     "categoria": "detalle_especifico",
     "pregunta": "¿Necesito formación previa para ser voluntario en DNI?",
-    "respuesta": "No, no es necesaria ninguna formación previa. (16_resis_49_preguntas.txt)",
+    "respuesta": "No, no es necesaria ninguna formación previa (16_resis_49_preguntas.txt).",
     "fuentes": [
       "14_impacto_social.txt",
       "16_resis_49_preguntas.txt",
@@ -1286,12 +1286,12 @@
     ],
     "metricas": {
       "prompt_tokens": 945,
-      "output_tokens": 24,
-      "tokens_per_sec": 39.5,
-      "latencia_s": 0.61,
+      "output_tokens": 23,
+      "tokens_per_sec": 38.38,
+      "latencia_s": 0.6,
       "modelo": "llama3.1:8b"
     },
-    "calidad": "fallo"
+    "calidad": "acierto"
   },
   {
     "modelo": "llama3.1:8b",
@@ -1299,7 +1299,7 @@
     "pregunta_id": "q13",
     "categoria": "fuera_ambito",
     "pregunta": "¿Cuánto cuesta el alquiler en Valencia?",
-    "respuesta": "Lo siento, pero no tengo esa información en mis fuentes. El contexto solo habla sobre la asociación DNI y sus actividades, sin mencionar detalles sobre el alquiler en Valencia.",
+    "respuesta": "Lo siento, pero no tengo esa información en mis fuentes.",
     "fuentes": [
       "16_resis_49_preguntas.txt",
       "06_coles_refuerzo.txt",
@@ -1309,9 +1309,9 @@
     ],
     "metricas": {
       "prompt_tokens": 983,
-      "output_tokens": 43,
-      "tokens_per_sec": 60.64,
-      "latencia_s": 0.71,
+      "output_tokens": 15,
+      "tokens_per_sec": 26.69,
+      "latencia_s": 0.56,
       "modelo": "llama3.1:8b"
     },
     "calidad": "fuera_ambito_ok"
@@ -1334,8 +1334,8 @@
     "metricas": {
       "prompt_tokens": 1025,
       "output_tokens": 10,
-      "tokens_per_sec": 18.3,
-      "latencia_s": 0.55,
+      "tokens_per_sec": 17.73,
+      "latencia_s": 0.56,
       "modelo": "llama3.1:8b"
     },
     "calidad": "fuera_ambito_ok"
@@ -1346,7 +1346,7 @@
     "pregunta_id": "q15",
     "categoria": "fuera_ambito",
     "pregunta": "¿Cómo se hace una tortilla de patatas?",
-    "respuesta": "Lo siento, pero no tengo esa información en mis fuentes. El contexto solo incluye preguntas y respuestas relacionadas con la asociación DNI Valencia y sus actividades, sin mencionar recetas o instrucciones para preparar alimentos como una tortilla de patatas.",
+    "respuesta": "Lo siento, pero no tengo esa información en mis fuentes. El contexto solo incluye preguntas y respuestas sobre actividades y logística de la asociación DNI Valencia, pero no contiene recetas ni instrucciones para preparar alimentos como una tortilla de patatas.",
     "fuentes": [
       "10_proyectos.txt",
       "06_coles_refuerzo.txt",
@@ -1356,9 +1356,9 @@
     ],
     "metricas": {
       "prompt_tokens": 955,
-      "output_tokens": 60,
-      "tokens_per_sec": 75.32,
-      "latencia_s": 0.8,
+      "output_tokens": 59,
+      "tokens_per_sec": 75.0,
+      "latencia_s": 0.79,
       "modelo": "llama3.1:8b"
     },
     "calidad": "fuera_ambito_ok"
