@@ -37,7 +37,7 @@ class ChatbotService:
         self.llm = llm
         self.retriever = retriever
 
-    def answer(self, question: Question, *, k: int = 5) -> Answer:
+    def answer(self, question: Question, *, k: int = 8) -> Answer:
         chunks = self.retriever.retrieve(question.text, k=k)
         prompt = self._build_prompt(question.text, chunks)
         text, metricas = self.llm.generate(prompt)

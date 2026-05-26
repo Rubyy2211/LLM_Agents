@@ -1,52 +1,95 @@
 [
   {
-    "id": "q1",
-    "categoria": "asignaturas",
-    "pregunta": "¿Hay alguna asignatura sobre desarrollo de videojuegos en GTI?",
-    "fuentes_esperadas": ["3_tercero.txt", "4_cuarto.txt"]
+    "id": "q01",
+    "categoria": "factual_directa",
+    "pregunta": "¿Qué es la asociación DNI?",
+    "fuentes_esperadas": ["04_filosofia_dni.txt", "08_preguntas_basicas.txt"]
   },
   {
-    "id": "q2",
-    "categoria": "asignaturas",
-    "pregunta": "¿En qué consiste la asignatura de Diseño de Interfaces y Experiencia de Usuario?",
-    "fuentes_esperadas": ["3_tercero.txt"]
+    "id": "q02",
+    "categoria": "logistica",
+    "pregunta": "¿Cómo me apunto a los desayunos solidarios?",
+    "fuentes_esperadas": ["01_faq_dni.txt", "07_desayunos_logistica.txt"]
   },
   {
-    "id": "q3",
-    "categoria": "asignaturas",
-    "pregunta": "¿Qué se da en la asignatura de Tratamiento Digital de Imagen?",
-    "fuentes_esperadas": ["3_tercero.txt"]
+    "id": "q03",
+    "categoria": "logistica",
+    "pregunta": "¿Cuándo y dónde son los desayunos solidarios?",
+    "fuentes_esperadas": ["07_desayunos_logistica.txt", "11_horarios_ubicaciones.txt"]
   },
   {
-    "id": "q4",
-    "categoria": "primer_curso",
-    "pregunta": "¿Qué asignaturas de primero introducen a la programación?",
-    "fuentes_esperadas": ["1_primero.txt"]
+    "id": "q04",
+    "categoria": "logistica",
+    "pregunta": "¿Qué necesito llevar para ir a un desayuno solidario?",
+    "fuentes_esperadas": ["07_desayunos_logistica.txt", "15_desayunos_100_preguntas.txt"]
   },
   {
-    "id": "q5",
-    "categoria": "consejo",
-    "pregunta": "Mi hijo quiere ser diseñador de videojuegos, ¿le sirve este grado?",
-    "fuentes_esperadas": ["3_tercero.txt", "4_cuarto.txt"]
+    "id": "q05",
+    "categoria": "logistica",
+    "pregunta": "¿Cómo contacto con DNI para apuntarme como voluntario?",
+    "fuentes_esperadas": ["09_como_participar.txt", "12_contacto_redes.txt"]
   },
   {
-    "id": "q6",
-    "categoria": "trampa_retrieval",
-    "pregunta": "¿Qué se da en la asignatura de Inteligencia Artificial?",
-    "fuentes_esperadas": ["3_tercero.txt"],
-    "nota": "Caso conocido: el retrieval semántico se distrae con 'Visión Artificial'. Documentado en el Colab §10."
+    "id": "q06",
+    "categoria": "sintesis_multidoc",
+    "pregunta": "¿En qué se diferencian el proyecto de residencias de mayores y el refuerzo escolar?",
+    "fuentes_esperadas": ["03_charlas_abuelitos.txt", "05_resis_actividades.txt", "06_coles_refuerzo.txt"]
   },
   {
-    "id": "q7",
-    "categoria": "fuera_de_ambito",
-    "pregunta": "¿Hay alguna asignatura sobre cocina creativa?",
+    "id": "q07",
+    "categoria": "sintesis_multidoc",
+    "pregunta": "¿Qué proyectos tiene DNI y cuál recomienda para empezar?",
+    "fuentes_esperadas": ["10_proyectos.txt", "09_como_participar.txt"]
+  },
+  {
+    "id": "q08",
+    "categoria": "sintesis_multidoc",
+    "pregunta": "¿Cuántos voluntarios tiene DNI y qué impacto social tiene?",
+    "fuentes_esperadas": ["14_impacto_social.txt", "08_preguntas_basicas.txt"]
+  },
+  {
+    "id": "q09",
+    "categoria": "contradiccion",
+    "pregunta": "¿A qué hora son los desayunos solidarios?",
+    "fuentes_esperadas": ["07_desayunos_logistica.txt", "15_desayunos_100_preguntas.txt"],
+    "nota": "El corpus puede contener horarios contradictorios entre documentos. El agente debe citarlos ambos."
+  },
+  {
+    "id": "q10",
+    "categoria": "detalle_especifico",
+    "pregunta": "¿Qué se hace exactamente en las visitas a residencias de mayores?",
+    "fuentes_esperadas": ["03_charlas_abuelitos.txt", "05_resis_actividades.txt", "16_resis_49_preguntas.txt"]
+  },
+  {
+    "id": "q11",
+    "categoria": "detalle_especifico",
+    "pregunta": "¿El refuerzo escolar requiere compromiso regular o puedo ir cuando quiera?",
+    "fuentes_esperadas": ["06_coles_refuerzo.txt", "10_proyectos.txt"]
+  },
+  {
+    "id": "q12",
+    "categoria": "detalle_especifico",
+    "pregunta": "¿Necesito formación previa para ser voluntario en DNI?",
+    "fuentes_esperadas": ["09_como_participar.txt", "08_preguntas_basicas.txt"]
+  },
+  {
+    "id": "q13",
+    "categoria": "fuera_ambito",
+    "pregunta": "¿Cuánto cuesta el alquiler en Valencia?",
     "fuentes_esperadas": [],
     "respuesta_esperada": "No tengo esa información en mis fuentes"
   },
   {
-    "id": "q8",
-    "categoria": "fuera_de_ambito",
-    "pregunta": "¿Cuánto cuesta el alquiler en Valencia?",
+    "id": "q14",
+    "categoria": "fuera_ambito",
+    "pregunta": "¿Cuál es la capital de Francia?",
+    "fuentes_esperadas": [],
+    "respuesta_esperada": "No tengo esa información en mis fuentes"
+  },
+  {
+    "id": "q15",
+    "categoria": "fuera_ambito",
+    "pregunta": "¿Cómo se hace una tortilla de patatas?",
     "fuentes_esperadas": [],
     "respuesta_esperada": "No tengo esa información en mis fuentes"
   }
