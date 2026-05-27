@@ -1,0 +1,82 @@
+{
+  "nota": "RAGAs 0.2.x no es compatible con Python 3.14 en Windows (bug del executor asíncrono). Las 4 métricas se calculan usando PoliGPT como LLM juez, replicando la metodología interna de RAGAs.",
+  "modelo_juez": "gemma3:4b",
+  "modelo_evaluado": "gemma3:4b",
+  "n_muestras": 8,
+  "metricas_ragas": {
+    "faithfulness": 0.8313,
+    "answer_relevancy": 0.875,
+    "context_precision": 0.4375,
+    "context_recall": 0.875
+  },
+  "detalle_por_pregunta": [
+    {
+      "pregunta": "¿Qué es la asociación DNI?",
+      "faithfulness": 1.0,
+      "answer_relevancy": 1.0,
+      "context_precision": 0.125,
+      "context_recall": 1.0
+    },
+    {
+      "pregunta": "¿Cómo me apunto a los desayunos solidarios?",
+      "faithfulness": 1.0,
+      "answer_relevancy": 1.0,
+      "context_precision": 1.0,
+      "context_recall": 1.0
+    },
+    {
+      "pregunta": "¿Cuándo y dónde son los desayunos solidarios?",
+      "faithfulness": 1.0,
+      "answer_relevancy": 1.0,
+      "context_precision": 0.625,
+      "context_recall": 1.0
+    },
+    {
+      "pregunta": "¿Cómo contacto con DNI para apuntarme como voluntario?",
+      "faithfulness": 1.0,
+      "answer_relevancy": 1.0,
+      "context_precision": 0.375,
+      "context_recall": 1.0
+    },
+    {
+      "pregunta": "¿En qué se diferencian el proyecto de residencias de mayores y el refuerzo escolar?",
+      "faithfulness": 0.8,
+      "answer_relevancy": 1.0,
+      "context_precision": 0.375,
+      "context_recall": 1.0
+    },
+    {
+      "pregunta": "¿Qué proyectos tiene DNI y cuál recomienda para empezar?",
+      "faithfulness": 0.85,
+      "answer_relevancy": 1.0,
+      "context_precision": 0.625,
+      "context_recall": 1.0
+    },
+    {
+      "pregunta": "¿Necesito formación previa para ser voluntario en DNI?",
+      "faithfulness": 1.0,
+      "answer_relevancy": 1.0,
+      "context_precision": 0.375,
+      "context_recall": 1.0
+    },
+    {
+      "pregunta": "¿Cuánto cuesta el alquiler en Valencia?",
+      "faithfulness": 0.0,
+      "answer_relevancy": 0.0,
+      "context_precision": 0.0,
+      "context_recall": 0.0
+    }
+  ],
+  "metricas_propias": {
+    "source_hit_rate": {
+      "valor": 1.0,
+      "descripcion": "Proporción de preguntas donde el retriever recuperó al menos una fuente correcta. Calculado sobre el benchmark completo (15 preguntas, modelo gemma3:4b). Definición: aciertos + fuera_ambito_ok / total_preguntas.",
+      "modelo": "gemma3:4b"
+    },
+    "rejection_precision": {
+      "valor": 1.0,
+      "descripcion": "Tasa de rechazo correcto en preguntas fuera del ámbito del corpus. Mide la robustez anti-alucinación del prompt. Definición: preguntas_fuera_ambito_rechazadas / total_fuera_ambito.",
+      "modelo": "gemma3:4b"
+    }
+  }
+}

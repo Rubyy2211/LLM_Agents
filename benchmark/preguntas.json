@@ -3,94 +3,106 @@
     "id": "q01",
     "categoria": "factual_directa",
     "pregunta": "¿Qué es la asociación DNI?",
-    "fuentes_esperadas": ["04_filosofia_dni.txt", "08_preguntas_basicas.txt"]
+    "fuentes_esperadas": ["04_filosofia_dni.txt", "08_preguntas_basicas.txt"],
+    "ground_truth": "La Asociación DNI (Damos Nuestra Ilusión) es una organización benéfica sin ánimo de lucro y de carácter juvenil, compuesta y gestionada por estudiantes universitarios y jóvenes profesionales en Valencia. Su objetivo principal es combatir la soledad y la exclusión social de colectivos vulnerables mediante el voluntariado activo en proyectos como desayunos solidarios, visitas a residencias de ancianos y refuerzo escolar para menores."
   },
   {
     "id": "q02",
     "categoria": "logistica",
     "pregunta": "¿Cómo me apunto a los desayunos solidarios?",
-    "fuentes_esperadas": ["01_faq_dni.txt", "07_desayunos_logistica.txt"]
+    "fuentes_esperadas": ["01_faq_dni.txt", "07_desayunos_logistica.txt"],
+    "ground_truth": "Para apuntarse a los desayunos solidarios debes utilizar el canal oficial de WhatsApp de la asociación. Los coordinadores abren la lista de inscripción todos los lunes a las 20:00 horas a través del grupo de difusión, y las plazas se asignan por estricto orden de llegada hasta completar el cupo máximo por jornada."
   },
   {
     "id": "q03",
     "categoria": "logistica",
     "pregunta": "¿Cuándo y dónde son los desayunos solidarios?",
-    "fuentes_esperadas": ["07_desayunos_logistica.txt", "11_horarios_ubicaciones.txt"]
+    "fuentes_esperadas": ["07_desayunos_logistica.txt", "11_horarios_ubicaciones.txt"],
+    "ground_truth": "Los desayunos solidarios se realizan todos los sábados y domingos por la mañana. El punto de encuentro y reparto principal es la Plaza de la Virgen en Valencia, desde donde los equipos se distribuyen por las rutas establecidas en el centro histórico para atender a las personas en situación de sinhogarismo."
   },
   {
     "id": "q04",
     "categoria": "logistica",
     "pregunta": "¿Qué necesito llevar para ir a un desayuno solidario?",
-    "fuentes_esperadas": ["07_desayunos_logistica.txt", "15_desayunos_100_preguntas.txt"]
+    "fuentes_esperadas": ["07_desayunos_logistica.txt", "15_desayunos_100_preguntas.txt"],
+    "ground_truth": "No es necesario que lleves comida ni materiales para el reparto, ya que la asociación provee todos los termos, alimentos e insumos necesarios gracias a las donaciones. Sin embargo, se requiere obligatoriamente que asistas con ropa cómoda, calzado adecuado para caminar y la sudadera o camiseta identificativa de la asociación DNI."
   },
   {
     "id": "q05",
     "categoria": "logistica",
     "pregunta": "¿Cómo contacto con DNI para apuntarme como voluntario?",
-    "fuentes_esperadas": ["09_como_participar.txt", "12_contacto_redes.txt"]
+    "fuentes_esperadas": ["09_como_participar.txt", "12_contacto_redes.txt"],
+    "ground_truth": "Puedes contactar con DNI enviando un correo electrónico a su dirección oficial de captación (voluntarios@asociaciondni.org) o rellenando el formulario de inscripción disponible en su perfil de Instagram (@asociacion_dni). Posteriormente, se te convocará a una sesión informativa para nuevos miembros."
   },
   {
     "id": "q06",
     "categoria": "sintesis_multidoc",
     "pregunta": "¿En qué se diferencian el proyecto de residencias de mayores y el refuerzo escolar?",
-    "fuentes_esperadas": ["03_charlas_abuelitos.txt", "05_resis_actividades.txt", "06_coles_refuerzo.txt"]
+    "fuentes_esperadas": ["03_charlas_abuelitos.txt", "05_resis_actividades.txt", "06_coles_refuerzo.txt"],
+    "ground_truth": "El proyecto de residencias de mayores se centra en el acompañamiento emocional y el ocio de personas de la tercera edad para mitigar su soledad mediante charlas, juegos de mesa y talleres los fines de semana. Por el contrario, el proyecto de refuerzo escolar tiene un enfoque académico y socioeducativo, dirigido a menores de entornos vulnerables, y se realiza entre semana en colegios asociados para ayudarles con los deberes y el estudio."
   },
   {
     "id": "q07",
     "categoria": "sintesis_multidoc",
     "pregunta": "¿Qué proyectos tiene DNI y cuál recomienda para empezar?",
-    "fuentes_esperadas": ["10_proyectos.txt", "09_como_participar.txt"]
+    "fuentes_esperadas": ["10_proyectos.txt", "09_como_participar.txt"],
+    "ground_truth": "DNI cuenta con tres proyectos principales de voluntariado: Desayunos Solidarios, Visitas a Residencias de Mayores y Refuerzo Escolar. Para las personas que acaban de unirse, la asociación recomienda comenzar por el proyecto de Desayunos Solidarios de los fines de semana, ya que no requiere un compromiso fijo periódico y permite integrarse y conocer rápidamente la dinámica del grupo."
   },
   {
     "id": "q08",
     "categoria": "sintesis_multidoc",
     "pregunta": "¿Cuántos voluntarios tiene DNI y qué impacto social tiene?",
-    "fuentes_esperadas": ["14_impacto_social.txt", "08_preguntas_basicas.txt"]
+    "fuentes_esperadas": ["14_impacto_social.txt", "08_preguntas_basicas.txt"],
+    "ground_truth": "La asociación DNI cuenta actualmente con una comunidad activa de más de 400 voluntarios. En términos de impacto social, esto se traduce en el reparto de más de 5.000 desayunos anuales a personas sin hogar, más de 1.200 horas de acompañamiento a ancianos en residencias y una mejora directa en el rendimiento académico y la integración de más de 80 menores en el programa de refuerzo escolar."
   },
   {
     "id": "q09",
     "categoria": "contradiccion",
     "pregunta": "¿A qué hora son los desayunos solidarios?",
     "fuentes_esperadas": ["07_desayunos_logistica.txt", "15_desayunos_100_preguntas.txt"],
-    "nota": "El corpus puede contener horarios contradictorios entre documentos. El agente debe citarlos ambos."
+    "nota": "El corpus puede contener horarios contradictorios entre documentos. El agente debe citarlos ambos.",
+    "ground_truth": "Existe una contradicción en los documentos del corpus respecto a la hora exacta. Por un lado, el documento '07_desayunos_logistica.txt' indica que el punto de encuentro es a las 08:30 de la mañana. Por otro lado, el documento '15_desayunos_100_preguntas.txt' señala que la actividad comienza formalmente a las 09:00 de la mañana."
   },
   {
     "id": "q10",
     "categoria": "detalle_especifico",
     "pregunta": "¿Qué se hace exactamente en las visitas a residencias de mayores?",
-    "fuentes_esperadas": ["03_charlas_abuelitos.txt", "05_resis_actividades.txt", "16_resis_49_preguntas.txt"]
+    "fuentes_esperadas": ["03_charlas_abuelitos.txt", "05_resis_actividades.txt", "16_resis_49_preguntas.txt"],
+    "ground_truth": "Durante las visitas a las residencias de mayores, los voluntarios realizan labores de acompañamiento activo y conversación. Las actividades específicas incluyen escuchar las historias de vida de los residentes, organizar partidas de juegos de mesa tradicionales (como el dominó, las cartas o el parchís), realizar talleres manuales o musicales adaptados, y pasear con ellos por las instalaciones o jardines del centro."
   },
   {
     "id": "q11",
     "categoria": "detalle_especifico",
     "pregunta": "¿El refuerzo escolar requiere compromiso regular o puedo ir cuando quiera?",
-    "fuentes_esperadas": ["06_coles_refuerzo.txt", "10_proyectos.txt"]
+    "fuentes_esperadas": ["06_coles_refuerzo.txt", "10_proyectos.txt"],
+    "ground_truth": "El proyecto de refuerzo escolar requiere obligatoriamente un compromiso regular y continuado por parte del voluntario (asistencia semanal fija). Esto es fundamental para no romper el vínculo de confianza con el menor asignado y garantizar un seguimiento psicopedagógico efectivo a lo largo del curso escolar."
   },
   {
     "id": "q12",
     "categoria": "detalle_especifico",
     "pregunta": "¿Necesito formación previa para ser voluntario en DNI?",
-    "fuentes_esperadas": ["16_resis_49_preguntas.txt", "09_como_participar.txt", "08_preguntas_basicas.txt"]
+    "fuentes_esperadas": ["16_resis_49_preguntas.txt", "09_como_participar.txt", "08_preguntas_basicas.txt"],
+    "ground_truth": "No se requiere ninguna formación previa ni titulación específica para unirse a DNI. La asociación se encarga de impartir una sesión formativa obligatoria y un taller de inducción inicial a todos los nuevos voluntarios antes de su incorporación, donde se explican las pautas de conducta, dinámicas de los proyectos y gestión de situaciones complejas."
   },
   {
     "id": "q13",
     "categoria": "fuera_ambito",
     "pregunta": "¿Cuánto cuesta el alquiler en Valencia?",
     "fuentes_esperadas": [],
-    "respuesta_esperada": "No tengo esa información en mis fuentes"
+    "ground_truth": "No tengo esa información en mis fuentes."
   },
   {
     "id": "q14",
     "categoria": "fuera_ambito",
     "pregunta": "¿Cuál es la capital de Francia?",
     "fuentes_esperadas": [],
-    "respuesta_esperada": "No tengo esa información en mis fuentes"
+    "ground_truth": "No tengo esa información en mis fuentes."
   },
   {
     "id": "q15",
     "categoria": "fuera_ambito",
     "pregunta": "¿Cómo se hace una tortilla de patatas?",
     "fuentes_esperadas": [],
-    "respuesta_esperada": "No tengo esa información en mis fuentes"
+    "ground_truth": "No tengo esa información en mis fuentes."
   }
 ]
