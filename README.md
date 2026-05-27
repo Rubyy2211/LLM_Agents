@@ -1,125 +1,183 @@
-# Agente RAG — repo-ejemplo (caso GTI Orienta)
-
-> Repo de **referencia** para la práctica del Asistente DNI de la asignatura
-> *Inteligencia Artificial* (3º GTI, UPV). **Léelo como ejemplo de cómo
-> entregar**, no como plantilla a forkear: el caso (GTI Orienta) es distinto
-> al que vais a entregar (DNI Valencia).
-
-## ¿Por qué este repo es un ejemplo y no la solución?
-
-| Eje | Práctica oficial | Este repo |
-|---|---|---|
-| Caso | Asociación DNI Valencia | Orientación académica GTI |
-| Corpus | 16 `.txt` (se os entrega) | 4 `.txt` (uno por curso del grado GTI) |
-| Banda | Vosotros decidís hasta dónde llegáis | 5 + 6 + 7 implementadas, hexagonal **NO** |
-
-El **patrón** (chunking, embeddings, retrieval, prompt anti-alucinación,
-cita de fuentes, métricas) es el mismo. El **dominio** es distinto. Eso
-permite que copiéis la **estructura** sin copiar la **solución**.
-
-## Arranque en menos de 5 minutos
-
+# Agente RAG — Asistente DNI Valencia
+ 
+> Práctica de *Inteligencia Artificial* (3º GTI, UPV).
+> Agente RAG con **arquitectura hexagonal** (banda 10) sobre el corpus de la
+> asociación DNI (Damos Nuestra Ilusión) Valencia.
+ 
+## Arranque rápido
+ 
 ```bash
 # 1. Clonar y entrar
-git clone <este-repo>
-cd agente-rag-gti
-
-# 2. Instalar (Python 3.11+)
-python -m venv .venv && source .venv/bin/activate
+git clone https://github.com/Rubyy2211/LLM_Agents
+cd LLM_Agents
+ 
+# 2. Entorno virtual (Python 3.10+)
+python -m venv .venv
+source .venv/bin/activate        # Linux/macOS
+.venv\Scripts\activate           # Windows
+ 
+# 3. Dependencias
 pip install -r requirements.txt
-
-# 3. Tener Ollama corriendo y los dos modelos disponibles
-#    (en local. Para probar contra UPV ver .env.example)
-ollama pull gemma2:27b
+ 
+# 4. Variables de entorno
+cp .env.example .env
+# Edita .env con tu POLIGPT_API_KEY y ajusta LLM_MODEL si hace falta
+ 
+# 5. Tener Ollama corriendo con los modelos necesarios
+ollama pull qwen2.5:3b
+ollama pull llama3.2:3b
 ollama pull nomic-embed-text
-
-# 4. Construir el índice (~ 30-90 s)
-python scripts/build_index.py
-
-# 5. Lanzar una consulta
-python consultar.py "¿Hay una asignatura sobre videojuegos en GTI?"
+ 
+# 6. Construir el índice ChromaDB (solo una vez, ~2-7 min en CPU)
+python scripts/build_index_hex.py
+ 
+# 7. Lanzar una consulta
+python consultar.py "¿Qué es la asociación DNI?"
 ```
-
-Salida (resumida):
-
+ 
+Salida esperada:
+ 
 ```json
 {
-  "respuesta": "Sí. En 4º se imparte 'Desarrollo de Videojuegos' (4_cuarto.txt)...",
-  "fuentes": ["4_cuarto.txt", "3_tercero.txt"],
+  "respuesta": "DNI (Damos Nuestra Ilusión) es una asociación de jóvenes voluntarios en Valencia... (08_preguntas_basicas.txt)",
+  "fuentes": ["08_preguntas_basicas.txt", "04_filosofia_dni.txt"],
   "chunks": [...],
-  "metricas": {"prompt_tokens": 612, "output_tokens": 45, "tokens_per_sec": 38.2, "latencia_s": 1.7, "modelo": "gemma2:27b"}
+  "metricas": {"prompt_tokens": 767, "output_tokens": 112, "tokens_per_sec": 105.6, "latencia_s": 7.4, "modelo": "qwen2.5:3b"},
+  "trazas": null,
+  "conversation_id": null
 }
 ```
-
+ 
 ## Estructura del repositorio
-
+ 
 ```
-agente-rag-gti/
-├── consultar.py          # CONTRATO §9 opción A (módulo Python)
-├── api.py                # CONTRATO §9 opción B (POST /query con FastAPI)
-├── features.json         # Declaración para el corrector — SIN ESTO LA NOTA ES 0
-├── GRUPO.md              # Plantilla equipo
-├── AI_USAGE.md           # Plantilla declaración de uso de IA
-├── corpus/               # 4 .txt (1º a 4º curso de GTI)
-├── src/agente_rag/       # Pipeline RAG modular (chunker, retriever, generator, ...)
+LLM_Agents/
+├── consultar.py              # Contrato §9 opción A — punto de entrada
+├── config.py                 # Composition root: monta adapters
+├── features.json             # Declaración de bandas para el corrector
+├── .env.example              # Plantilla de variables de entorno
+│
+├── domain/                   # Dominio puro (sin imports externos)
+│   ├── entities.py           # Question, Answer, Chunk (dataclasses)
+│   ├── ports.py              # LLMPort, EmbedderPort, RetrieverPort (Protocols)
+│   └── chatbot_service.py    # Lógica RAG — orquesta retrieval + LLM
+│
+├── adapters/                 # Implementaciones intercambiables
+│   ├── llm/
+│   │   ├── ollama_llm.py     # LLMPort → Ollama local
+│   │   ├── poligpt_llm.py    # LLMPort → PoliGPT UPV
+│   │   └── fake_llm.py       # LLMPort → stub para tests
+│   ├── embedder/
+│   │   ├── ollama_embedder.py  # EmbedderPort → nomic-embed-text
+│   │   └── st_embedder.py      # EmbedderPort → sentence-transformers
+│   └── retriever/
+│       ├── chroma_retriever.py # RetrieverPort → ChromaDB persistente
+│       └── faiss_retriever.py  # RetrieverPort → FAISS (segunda impl.)
+│
+├── corpus/                   # 16 .txt del corpus DNI (no modificar)
 ├── scripts/
-│   ├── build_index.py    # Construye índice ChromaDB persistente
-│   └── run_eval.py       # Ejecuta el benchmark
-├── tests/                # pytest sin dependencia de red (mocks de Ollama)
+│   └── build_index_hex.py    # Construye índice ChromaDB
 ├── benchmark/
-│   ├── preguntas.json    # 8 preguntas tipo (incluye 2 fuera-de-ámbito)
-│   └── README.md         # Cómo evaluar resultados
-├── docs/
-│   ├── ARCHITECTURE.md   # Decisiones de diseño y por qué
-│   └── CONTRACT.md       # Contrato de interfaz al detalle
-└── .github/workflows/ci.yml   # Tests + lint en cada push
+│   ├── preguntas.json        # 15 preguntas de evaluación
+│   ├── benchmark.py          # Script benchmark 4 modelos
+│   ├── benchmark.json        # Resultados crudos
+│   └── benchmark.md          # Tabla + interpretación
+├── evaluacion/
+│   ├── ragas_eval.py         # Evaluación con métricas RAGAs
+│   ├── ragas_results.json    # Resultados RAGAs + métricas propias
+│   └── metricas_propias.md   # Definición y valores
+├── tests/
+│   └── test_chatbot_service.py  # 6 tests del dominio sin red
+└── src/agente_rag/           # Pipeline original (chunker, config, etc.)
 ```
-
+ 
+## Arquitectura hexagonal
+ 
+El dominio no depende de ningún detalle de infraestructura. Los adapters
+son intercambiables con **una línea** en `config.py`:
+ 
+```
+        adapters              ports            dominio puro
+   ┌─────────────┐       ┌──────────┐       ┌─────────────────────┐
+   │ OllamaLLM   │──────▶│ LLMPort  │──────▶│                     │
+   │ PoliGPTLLM  │       └──────────┘       │   ChatbotService    │
+   └─────────────┘                          │                     │
+   ┌─────────────┐       ┌──────────────┐   │  Question → Answer  │
+   │OllamaEmb    │──────▶│ EmbedderPort │──▶│                     │
+   └─────────────┘       └──────────────┘   └─────────────────────┘
+   ┌─────────────┐       ┌──────────────┐
+   │ChromaRetr   │──────▶│RetrieverPort │
+   │FAISSRetr    │       └──────────────┘
+   └─────────────┘
+```
+ 
+### Cómo añadir un adapter nuevo
+ 
+Por ejemplo, para añadir `GPT4oLLM`:
+ 
+1. Crea `adapters/llm/gpt4o_llm.py` implementando el método `generate(prompt, *, temperature) -> tuple[str, dict]`
+2. En `config.py`, añade un caso en `build_service`:
+```python
+elif llm_backend == "gpt4o":
+    from adapters.llm.gpt4o_llm import GPT4oLLM
+    llm = GPT4oLLM(api_key=os.getenv("OPENAI_API_KEY"))
+```
+3. Listo. El dominio no cambia.
 ## Bandas implementadas
-
-- **Banda 5** ✓ — pipeline RAG con prompt anti-alucinación.
-- **Banda 6** ✓ — cada respuesta cita el archivo fuente.
-- **Banda 7** parcial — el contrato emite `chunks` y `metricas` (tokens,
-  tokens/s, latencia). **Falta** el benchmark con 4 modelos: lo dejamos a
-  los alumnos para que midan tradeoffs reales.
-- **Banda 8** — no implementada. Sería integrar RAGAs sobre los outputs
-  de `scripts/run_eval.py`.
-- **Banda 10** — *deliberadamente no implementada*. El reto del 10 es
-  refactorizar este single-agent a hexagonal (ver `manual_desarrollador_dni.pdf`
-  sección 4). Si os lo damos hecho, regalamos la nota máxima.
-
+ 
+| Banda | Descripción | Estado |
+|-------|-------------|--------|
+| 5 | Pipeline RAG completo + anti-alucinación + Ollama local | ✅ |
+| 6 | Cita del archivo fuente en respuesta y campo `fuentes` | ✅ |
+| 7 | Benchmark 4 modelos (2 Ollama + 2 PoliGPT) con métricas | ✅ |
+| 8 | Métricas RAGAs (faithfulness, relevancy, precision, recall) + 2 propias | ✅ |
+| 10 | Arquitectura hexagonal completa + tests sin red | ✅ |
+ 
+## Benchmark — resumen
+ 
+| Modelo | Servidor | Aciertos | Latencia media | Tokens/s |
+|--------|----------|----------|----------------|----------|
+| qwen2.5:3b | ollama_local | 14/15 | 4.18s | 108.9 |
+| llama3.2:3b | ollama_local | 14/15 | 4.86s | 105.9 |
+| gemma3:4b | poligpt | 14/15 | 1.27s | 66.2 |
+| llama3.1:8b | poligpt | 14/15 | 4.72s | 72.2 |
+ 
+**Modelo elegido**: `gemma3:4b` (PoliGPT) por mejor ratio calidad/latencia.
+Fallback local: `qwen2.5:3b` (Ollama) cuando no hay VPN disponible.
+ 
+## Métricas RAGAs
+ 
+| Métrica | Valor | Interpretación |
+|---------|-------|----------------|
+| faithfulness | 0.83 | Alta fidelidad al corpus |
+| answer_relevancy | 0.88 | Respuestas bien orientadas |
+| context_precision | 0.44 | Margen de mejora con k menor |
+| context_recall | 0.88 | Retriever encuentra info necesaria |
+| source_hit_rate | 1.00 | Fuente correcta siempre recuperada |
+| rejection_precision | 1.00 | Anti-alucinación perfecto |
+ 
 ## Tests
-
+ 
 ```bash
-pytest -q
+pytest tests/ -v
+# 6 passed in 0.04s — sin red, sin Ollama, sin ChromaDB
 ```
-
-Los tests **no llaman a Ollama**: parchean `retrieve` y `generate` con stubs
-para verificar que el contrato (`{respuesta, fuentes, chunks, metricas, trazas}`)
-se respeta y que el `features.json` declara coherentemente lo que entrega.
-
-## Por qué este repo está bien estructurado (lo que queremos que copiéis)
-
-1. **Separación clara `src/` ↔ `consultar.py`/`api.py`**. La lógica vive en
-   el paquete, los puntos de entrada son finos. Si mañana queremos meter
-   un Streamlit (extra +1.5), es otro fichero más, no un refactor.
-2. **`features.json` válido y honesto**. Marca `true` solo lo que
-   funciona. Los alumnos que declaren `banda7=true` sin `benchmark/` se
-   detectan en el corrector.
-3. **Tests aislados de red**. CI corre en GitHub Actions sin Ollama.
-4. **Conventional commits granulares**. Mira `git log --oneline`: cada
-   commit toca una capa, no hay un commit-monstruo "lo subo todo".
-5. **Cita de fuentes literal en el prompt** (`prompts.py`). La banda 6 se
-   gana en el prompt, no en el postproceso.
-
-## Avisos legales y éticos
-
-- Modelo y corpus son material docente. No lo redistribuyáis fuera del aula
-  sin autorización del profesor.
-- Si añadís `boto3`/AWS Rekognition, **rotad credenciales** después.
-  Ningún `.env` con secretos debe llegar a un repo público.
-
+ 
+Los tests usan `FakeLLM` y `FakeRetriever` para verificar la lógica del
+dominio de forma aislada.
+ 
+## Requisitos
+ 
+- Python 3.10+
+- Ollama con `qwen2.5:3b`, `llama3.2:3b` y `nomic-embed-text`
+- VPN UPV para usar PoliGPT (benchmark y RAGAs)
+- Ver `requirements.txt` para dependencias Python
+## Notas importantes
+ 
+- El corpus (`corpus/`) no debe modificarse — forma parte del enunciado.
+- Nunca subas `.env` al repositorio — usa `.env.example` como plantilla.
+- El índice ChromaDB se genera en `data/chroma/` y no se versiona (`.gitignore`).
 ## Créditos
-
-Vicente Rivas Monferrer & Juan M. Alberola — Universitat Politècnica de
-València, 2026.
+ 
+Práctica desarrollada para *Inteligencia Artificial*, Grado en Tecnologías
+Interactivas, Universitat Politècnica de València, 2026.

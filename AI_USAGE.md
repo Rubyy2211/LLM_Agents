@@ -6,7 +6,7 @@
 ## ¿Qué herramientas habéis usado?
 
 - [ ] ChatGPT (GPT-4 / GPT-5 / o3 / ...)
-- [ ] Claude (Sonnet / Opus / ...)
+- [X] Claude (Sonnet / Opus / ...)
 - [ ] GitHub Copilot
 - [ ] Cursor / Windsurf / IDE con asistente integrado
 - [ ] Gemini
