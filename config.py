@@ -38,6 +38,8 @@ def build_service(llm_backend: str = "ollama", llm_model: str | None = None):
  
     from adapters.embedder.ollama_embedder import OllamaEmbedder
     from adapters.retriever.chroma_retriever import ChromaRetriever
+    from adapters.retriever.hybrid_retriever import HybridRetriever
+    from adapters.parser.document_loader import obtener_todos_los_chunks_del_disco
     from adapters.llm.ollama_llm import OllamaLLM
     from domain.chatbot_service import ChatbotService
  
@@ -46,10 +48,22 @@ def build_service(llm_backend: str = "ollama", llm_model: str | None = None):
         model=EMBED_MODEL,
         verify_ssl=VERIFY_SSL,
     )
-    retriever = ChromaRetriever(
+    # 2. Inicializamos el recuperador Semántico base (Chroma)
+    base_chroma_retriever = ChromaRetriever(
         embedder=embedder,
         collection_name=COLLECTION,
         chroma_path=CHROMA_PATH,
+    )
+    
+    # 3. Leemos los textos planos del disco para alimentar al motor Léxico (BM25)
+    chunks_del_disco = obtener_todos_los_chunks_del_disco(CORPUS_DIR)
+    
+    # 4. Construimos el verdadero Retriever Híbrido combinando ambos mundos
+    hybrid_retriever = HybridRetriever(
+        chroma_retriever=base_chroma_retriever,
+        todos_los_chunks=chunks_del_disco,
+        k=8,         # Número de chunks que queremos pasarle al LLM
+        alpha=0.45   # Balance de peso (0.45 Semántica Chroma / 0.55 Léxica BM25)
     )
  
     if llm_backend == "poligpt":
@@ -61,5 +75,5 @@ def build_service(llm_backend: str = "ollama", llm_model: str | None = None):
         model = llm_model or LLM_MODEL
         llm = OllamaLLM(base_url=OLLAMA_URL, model=model, verify_ssl=VERIFY_SSL)
  
-    service = ChatbotService(llm=llm, retriever=retriever)
-    return service, retriever
+    service = ChatbotService(llm=llm, retriever=hybrid_retriever)
+    return service, hybrid_retriever
