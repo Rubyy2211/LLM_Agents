@@ -21,7 +21,7 @@ EMBED_MODEL    = os.getenv("EMBED_MODEL", "nomic-embed-text")
 VERIFY_SSL     = os.getenv("VERIFY_SSL", "true").lower() in {"1", "true", "yes"}
 CHROMA_PATH    = Path(os.getenv("CHROMA_PATH", "./data/chroma"))
 COLLECTION     = os.getenv("COLLECTION_NAME", "dni")
-CORPUS_DIR     = Path(os.getenv("CORPUS_DIR", "./corpus"))
+CORPUS_DIR     = Path(os.getenv("CORPUS_DIR", "./base_conocimiento"))
 POLIGPT_URL    = os.getenv("POLIGPT_BASE_URL", "https://api.poligpt.upv.es/v1")
 POLIGPT_KEY    = os.getenv("POLIGPT_API_KEY", "")
  
