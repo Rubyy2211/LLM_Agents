@@ -97,9 +97,9 @@ class HybridRetriever:
                     chunk_id=chunk_original.chunk_id
                 )
             )
-        
-        def build_index(self, chunks: list) -> int:
-            """Delega la creación del índice vectorial a Chroma."""
-            return self.chroma_retriever.build_index(chunks)
-            
         return resultados_finales
+    def build_index(self, chunks: list) -> int:
+        """Delega la creación del índice vectorial a Chroma."""
+        return self.chroma_retriever.build_index(chunks)
+            
+    

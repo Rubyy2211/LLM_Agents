@@ -156,6 +156,18 @@ Fallback local: `qwen2.5:3b` (Ollama) cuando no hay VPN disponible.
 | source_hit_rate | 1.00 | Fuente correcta siempre recuperada |
 | rejection_precision | 1.00 | Anti-alucinación perfecto |
  
+## Frontend
+
+Interfaz web con Streamlit que expone el agente visualmente:
+
+```bash
+streamlit run adapters/web/streamlit_ui.py
+```
+
+Disponible en `http://localhost:8501`. Incluye historial de conversación,
+fuentes expandibles por respuesta, métricas en tiempo real y ejemplos
+de preguntas en el sidebar.
+
 ## Tests
  
 ```bash
