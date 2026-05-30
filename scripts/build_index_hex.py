@@ -26,7 +26,7 @@ def main() -> int:
     docs = load_corpus(CORPUS_DIR)
     print(f"[build_index] {len(docs)} documentos cargados.")
  
-    chunks = split_documents(docs, chunk_size=500, chunk_overlap=100)
+    chunks = split_documents(docs, chunk_size=300, chunk_overlap=100)
     print(f"[build_index] {len(chunks)} chunks generados.")
  
     _, retriever = build_service(llm_backend="ollama")

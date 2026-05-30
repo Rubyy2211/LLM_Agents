@@ -1,10 +1,3 @@
-"""Frontend Streamlit del Agente RAG DNI.
-
-Ejecución desde la raíz del repo:
-    streamlit run adapters/web/streamlit_ui.py
-
-Extra +1.5 — expone el agente con UI funcional, no solo cosmética.
-"""
 from __future__ import annotations
 import sys
 from pathlib import Path
@@ -33,11 +26,13 @@ def get_service():
 st.title("🤝 Asistente DNI Valencia")
 st.caption("Pregúntame sobre la asociación Damos Nuestra Ilusión — desayunos solidarios, RESIS, COLES y más.")
 
-# Historial de conversación
+# Inicializar variables de estado
 if "messages" not in st.session_state:
     st.session_state.messages = []
+if "click_question" not in st.session_state:
+    st.session_state.click_question = None
 
-# Mostrar historial
+# Mostrar historial completo acumulado
 for msg in st.session_state.messages:
     with st.chat_message(msg["role"]):
         st.markdown(msg["content"])
@@ -53,19 +48,27 @@ for msg in st.session_state.messages:
                 cols[2].metric("Tokens/s", m.get("tokens_per_sec", "?"))
                 cols[3].metric("Tokens out", m.get("output_tokens", "?"))
 
-# Input del usuario
-if pregunta := st.chat_input("¿En qué puedo ayudarte?"):
-    # Mostrar mensaje usuario
-    st.session_state.messages.append({"role": "user", "content": pregunta})
-    with st.chat_message("user"):
-        st.markdown(pregunta)
+# Capturar entrada: Puede venir de la caja de chat o del trigger de los botones
+pregunta_usuario = st.chat_input("¿En qué puedo ayudarte?")
 
-    # Obtener respuesta
+# Si se pulsó un botón en el sidebar, recuperamos esa pregunta
+if st.session_state.click_question:
+    pregunta_usuario = st.session_state.click_question
+    st.session_state.click_question = None  # Consumir el trigger inmediatamente
+
+# --- Procesamiento de la Pregunta ---
+if pregunta_usuario:
+    # 1. Mostrar y guardar el mensaje del usuario
+    st.session_state.messages.append({"role": "user", "content": pregunta_usuario})
+    with st.chat_message("user"):
+        st.markdown(pregunta_usuario)
+
+    # 2. Obtener respuesta del Agente RAG
     with st.chat_message("assistant"):
         with st.spinner("Buscando en el corpus DNI..."):
             try:
                 service = get_service()
-                q = Question(text=pregunta)
+                q = Question(text=pregunta_usuario)
                 answer = service.answer(q)
 
                 st.markdown(answer.text)
@@ -82,11 +85,12 @@ if pregunta := st.chat_input("¿En qué puedo ayudarte?"):
                     cols[2].metric("Tokens/s", m.get("tokens_per_sec", "?"))
                     cols[3].metric("Tokens out", m.get("output_tokens", "?"))
 
+                # Guardar respuesta en el historial de sesión
                 st.session_state.messages.append({
                     "role": "assistant",
                     "content": answer.text,
-                    "fuentes": list(answer.sources),  # forzar copia de la lista
-                    "metricas": dict(answer.metricas),  # forzar copia del dict
+                    "fuentes": list(answer.sources),
+                    "metricas": dict(answer.metricas),
                 })
 
             except Exception as e:
@@ -97,7 +101,7 @@ if pregunta := st.chat_input("¿En qué puedo ayudarte?"):
                     "content": error_msg,
                 })
 
-# Sidebar con info
+# --- Sidebar con información y ejemplos ---
 with st.sidebar:
     st.header("ℹ️ Sobre este asistente")
     st.markdown("""
@@ -122,10 +126,12 @@ with st.sidebar:
     ]
     for ejemplo in ejemplos:
         if st.button(ejemplo, use_container_width=True):
-            st.session_state.messages.append({"role": "user", "content": ejemplo})
+            # En vez de añadir el mensaje nosotros, activamos el trigger y recargamos
+            st.session_state.click_question = ejemplo
             st.rerun()
 
     st.divider()
     if st.button("🗑️ Limpiar conversación", use_container_width=True):
         st.session_state.messages = []
+        st.session_state.click_question = None
         st.rerun()

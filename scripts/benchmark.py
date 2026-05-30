@@ -28,8 +28,9 @@ MODELOS = [
 ]
 
 PREGUNTAS_PATH = ROOT / "benchmark" / "preguntas.json"
-OUTPUT_JSON    = ROOT / "benchmark" / "benchmark.json"
-OUTPUT_MD      = ROOT / "benchmark" / "benchmark.md"
+OUTPUT_JSON    = ROOT / "benchmark" / "runs" / f"run_{int(time.time())}.json"
+OUTPUT_MD      = ROOT / "benchmark" / "runs" / f"run_{int(time.time())}.md"
+
 
 def cargar_preguntas() -> list[dict]:
     with open(PREGUNTAS_PATH, encoding="utf-8") as f:
@@ -39,8 +40,9 @@ def evaluar_respuesta(respuesta: str, fuentes: list[str], pregunta: dict) -> str
     """Evaluación subjetiva simple: acierto / fallo / fuera_ambito_ok."""
     esperadas = pregunta.get("fuentes_esperadas", [])
     resp_esperada = pregunta.get("respuesta_esperada", "")
+    ground = pregunta.get("ground_truth", False)
  
-    if resp_esperada and resp_esperada.lower() in respuesta.lower():
+    if ground and ground.lower() in respuesta.lower():
         return "fuera_ambito_ok"
     if not esperadas:
         # Pregunta fuera de ámbito pero no rechazó

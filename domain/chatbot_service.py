@@ -9,10 +9,10 @@ REJECTION_PHRASE = "No tengo esa información en mis fuentes."
 PROMPT_TEMPLATE = """Eres un asistente de la asociación DNI (Damos Nuestra Ilusión) Valencia. Tu tarea es responder a la pregunta de forma cercana y concisa usando exclusivamente los documentos provistos.
 
 [EJEMPLO 1: INFORMACIÓN ENCONTRADA]
-DOCUMENTO: normas.txt
+DOCUMENTO: archivo_ejemplo.txt
 Contenido: Q: ¿Se necesita coche? A: No es obligatorio tener coche propio.
 Pregunta: ¿Necesito coche para el voluntariado?
-Respuesta: No es obligatorio tener coche propio para asistir a las actividades. (normas.txt)
+Respuesta: No es obligatorio tener coche propio para asistir a las actividades. (archivo_ejemplo.txt)
 
 [EJEMPLO 2: INFORMACIÓN NO ENCONTRADA]
 DOCUMENTO: horarios.txt
@@ -38,7 +38,7 @@ class ChatbotService:
         self.llm = llm
         self.retriever = retriever
 
-    def answer(self, question: Question, *, k: int = 5) -> Answer:
+    def answer(self, question: Question, *, k: int = 3) -> Answer:
         chunks = self.retriever.retrieve(question.text, k=k)
         prompt = self._build_prompt(question.text, chunks)
         text, metricas = self.llm.generate(prompt)
