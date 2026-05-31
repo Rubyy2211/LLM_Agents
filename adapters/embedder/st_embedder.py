@@ -1,9 +1,7 @@
 """Adapter embedder → sentence-transformers (sin Ollama)."""
 from __future__ import annotations
-
-from sentence_transformers import SentenceTransformer
-
-
+ 
+ 
 class STEmbedder:
     """Implementa EmbedderPort estructuralmente usando sentence-transformers."""
  
