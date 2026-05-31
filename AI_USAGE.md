@@ -50,11 +50,14 @@
 - **Informe de la práctica**: redactado íntegramente por el equipo.
 - **Decisiones de diseño**: qué banda aspirar, qué modelos elegir para el
   benchmark, qué chunk_size usar — decisiones propias.
-
+- **Depuración de entorno**: instalación de Build Tools para compilar
+  dependencias, configuración de VPN UPV, resolución de conflictos de
+  versiones Python 3.14 — resueltos por nosotros con orientación de Claude.
+  
 ## Compromiso
 
 Hemos leído y entendido todo el código que hemos entregado. En la presentación
 oral en directo seremos capaces de defender cualquier línea que el profesor
 nos señale. Si no podemos defender una decisión, asumimos que la nota baja.
 
-Firma (digital, escribiendo el nombre): __________________________
+Firma (digital, escribiendo el nombre): **Alexandru**, **Fedor**, **Rubén**
